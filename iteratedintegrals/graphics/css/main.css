@@ -1,0 +1,71 @@
+html, body {
+    margin: 0px;
+    background-color: white;
+}
+
+body {
+
+}
+
+.title {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: normal;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.content {
+    padding: 20px;
+}
+
+#container {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+#controls {
+    margin: auto;
+    width: 450px;
+    background-color: white;
+    padding: 20px;
+}
+
+.controlstable {
+
+}
+
+.slider {
+    
+}
+
+td {
+    padding-left: 10px;
+}
+
+#canvas {
+    margin: auto;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.number_display {
+    width: 100px;
+    text-align: right;
+}
+
+.td_slider {
+    width: 130px;
+}
+
+input[type=range] {
+    display: block;
+    /*width : 150px;*/
+    /*height: 20px;*/
+}

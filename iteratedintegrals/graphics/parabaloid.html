@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Parabaloid</title>
+<meta charset="utf-8"/>
+<script type="text/javascript" src="js/three.min.js"></script>
+<script type="text/javascript" src="js/TrackballControls.js"></script>
+<script type="text/javascript" src="js/STLLoader.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+<script type="text/javascript" src="katex.min.js"></script>
+<link   rel="stylesheet" type="text/css" href="katex.min.css">
+<link   rel="stylesheet" type="text/css" href="css/main.css">
+<link   rel="stylesheet" type="text/css" href="css/parabaloid.css">
+</head>
+<body>
+
+<div id="container">
+
+    <div class="title">
+        <h3>Iterated Integration over a Parabaloid</h3>
+    </div>
+
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis lobortis tincidunt. Sed blandit urna ex, vel mollis eros tempor et. Fusce consectetur cursus venenatis. Sed blandit efficitur tempus. Nullam scelerisque, risus quis maximus rhoncus, massa lectus rutrum nibh, eget pharetra diam ante non lacus. Integer lobortis laoreet tellus. Suspendisse consequat metus at pulvinar aliquam. Morbi venenatis ultrices semper. Integer feugiat orci sem, at convallis justo mattis at. Maecenas non tincidunt lectus, sed volutpat sapien. Aliquam nunc ligula, aliquet non odio a, accumsan pellentesque metus. Aenean porttitor, sem eget semper ultrices, odio elit suscipit eros, a lacinia turpis nisl sit amet tortor. Nam nec lorem vel diam placerat tristique. Nulla facilisi.</p>
+
+    <p>Donec a augue eget massa egestas dictum at eu sem. Nullam eu mollis libero. Nulla iaculis sit amet lorem sit amet eleifend. Nam eleifend, ex vel laoreet ultricies, leo quam porttitor nunc, sed hendrerit elit nisl ut erat. Aliquam cursus efficitur ipsum vel hendrerit. Integer gravida massa non enim placerat dapibus vel id est. Aliquam erat volutpat. Vivamus nec tellus a dolor varius elementum. Aenean et pellentesque ante. Proin vitae turpis laoreet, tempus velit sed, fermentum ipsum. Ut lobortis vestibulum convallis. Quisque varius nibh lorem, non pretium ex tempus sed. Proin viverra nulla eget diam porttitor, ac lobortis nulla euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit odio sit amet viverra rhoncus.</p>
+
+    <p>Cras egestas nulla a tristique venenatis. Donec facilisis erat ut diam fringilla, id aliquet urna accumsan. Phasellus placerat fringilla urna vel finibus. Nam faucibus neque id lobortis commodo. Donec facilisis id odio sed malesuada. Nunc finibus pretium lectus nec dictum. Pellentesque ut aliquet est, ac accumsan dui. Vestibulum rhoncus, nisl non auctor feugiat, eros enim vulputate augue, vel rutrum mauris dolor non mauris.</p>
+
+    </div>
+
+    <hr>
+
+    <center><div id="controls">
+        <table class="controlstable">
+            <tr>
+                <td></td>
+                <td id="int_zxy">
+                    <script type="text/javascript">
+                        // Integrate Z-X-Y
+                        // katex.render("\\int \\text{d}z \\int \\text{d}x \\int \\text{d}y",
+                        //     document.getElementById("int_zxy"))
+                        katex.render("\\iiint \\text{d}z \\text{d}x \\text{d}y",
+                            document.getElementById("int_zxy"))
+                    </script>
+                </td>
+                <td></td>
+                <td id="int_xzy">
+                <script type="text/javascript">
+                    // Integrate X-Z-Y
+                    // katex.render("\\int \\text{d}x \\int \\text{d}z \\int \\text{d}y",
+                    //     document.getElementById("int_xzy"))
+                    katex.render("\\iiint \\text{d}x \\text{d}z \\text{d}y",
+                        document.getElementById("int_xzy"))
+                </script>
+            </td>
+            </tr>
+            <tr>
+                <td><div id="target1_x" class="number_display"></div></td>
+                <td><input id="control1_x" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+
+                <td><div id="target2_x" class="number_display"></div></td>
+                <td><input id="control2_x" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+            </tr>
+            <tr>
+                <td><div id="target1_z" class="number_display"></div></td>
+                <td><input id="control1_z" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+
+                <td><div id="target2_z" class="number_display"></div></td>
+                <td><input id="control2_z" class="slider" type="range" min="-2" max="2" value="-2" step="0.01"></td>
+            </tr>
+        </table>
+
+        <!-- <table>
+            <hr>
+            <tr>
+                <td>Axes:</td>
+                <td><input id="control_axes" type="checkbox"</td>
+            </tr>
+            <tr>
+                <td>XZ-Plane:</td>
+                <td><input id="control_plane" type="checkbox"</td>
+            </tr>
+            <tr>
+                <td>Volume Opacity = <span id="opacity_display"></span></td>
+                <td><input id="control_opacity" class="slider" type="range" min="0" max="1" value="0.7" step="0.01"></td>
+            </tr>
+        </table> -->
+        
+    </div></center>
+
+    <center><canvas id="canvas"></canvas></center>
+
+    <div class="content">
+    <p>Praesent ut lectus massa. Nullam non erat quam. Nam a metus quis ipsum semper sodales vitae non purus. Integer laoreet posuere fringilla. Cras ultrices vehicula justo, a blandit felis rutrum quis. In ultrices lorem tempus enim pellentesque tincidunt. Aenean faucibus pulvinar blandit. Fusce id tincidunt odio, sed luctus risus. Nam interdum condimentum gravida. Nam ultricies nisi sed mauris tempus, sed congue ex iaculis. Integer vulputate sapien ut urna finibus consectetur. Proin suscipit metus ut ex sodales elementum. Duis vel enim sodales, fermentum lacus vel, tincidunt nunc.</p>
+
+    <p>In hac habitasse platea dictumst. Fusce dapibus mauris ac auctor tristique. In hac habitasse platea dictumst. Donec consequat varius elit a fringilla. Etiam commodo, metus et ornare malesuada, felis tellus rutrum magna, et vulputate elit ligula vel quam. Pellentesque id est massa. In pretium elit non ipsum feugiat, iaculis pretium arcu accumsan. Donec sed quam porta, facilisis est non, scelerisque leo. Pellentesque in eleifend erat, eget pretium odio. Sed tempor, massa vitae mollis vestibulum, risus lacus consequat risus, eu blandit risus lectus vitae erat. Fusce vel mollis justo.</p>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/scene_setup.js"></script>
+<script type="text/javascript">
+
+/////////////////////////////////////////
+// OBJECTS
+/////////////////////////////////////////
+
+// axes
+var axesHelper = new THREE.AxesHelper( 500 );
+axesHelper.material.depthTest = false
+axesHelper.renderOrder = 10
+// scene.add( axesHelper );
+
+function updateAxes(evt) {
+    const target = (evt.target) ? evt.target : evt.srcElement
+    axesHelper.visible = target.checked
+    render()
+}
+// var control_axes = document.getElementById("control_axes")
+// control_axes.addEventListener("change", updateAxes)
+// updateAxes({ target:control_axes })
+
+// slices
+
+const scale = 150
+const coo_x = 1
+const coo_z = 0.25
+
+var y = function(x,z) {
+    var term_x = coo_x * Math.pow(x,2)
+    var term_z = coo_z * Math.pow(z,2)
+    return Math.sqrt(1 - term_x - term_z)
+}
+
+var line_material = new THREE.LineBasicMaterial({
+    color: 0x00ff00,
+    linewidth: 3,
+    depthTest: false,
+    linecap: "round"
+})
+
+// var slice_material = new THREE.MeshBasicMaterial({
+//     color: 0x0000ff,
+//     side: THREE.DoubleSide,
+//     needsUpdate: true,
+//     depthTest: false
+// })
+
+var slice_material_solid = new THREE.MeshPhongMaterial({
+    color: 0x0000ff,
+    side: THREE.DoubleSide,
+    needsUpdate: true,
+    depthTest: false,
+    shininess: 10,
+    specular: 0x222222,
+})
+
+var slice_material_transparent = new THREE.MeshPhongMaterial({
+    color: 0x0000ff,
+    side: THREE.DoubleSide,
+    needsUpdate: true,
+    depthTest: true,
+    shininess: 10,
+    specular: 0x222222,
+})
+
+var slice_material = slice_material_solid
+
+var slices = []
+
+function updateSliceMaterial() {
+    for (var i = 0; i < slices.length; i++) {
+        slices[i].material = slice_material
+    }
+}
+
+/////////////////////////////////////////
+// Integration 1 : x then y
+/////////////////////////////////////////
+
+_ = function() {
+
+    const zrange = 2
+    var slider_x, slider_z
+
+    var y_slicez = function(x) { return y(x,slider_z) }
+    var y_slicex = function() { return y(slider_x,slider_z) }
+
+    /////////////////////////////////////////
+    // SLICE Z
+    /////////////////////////////////////////
+
+    function getUpdatedSliceZShape() {
+        var shape = new THREE.Shape()
+        const radius = y_slicez(0)
+        shape.moveTo(-radius,0)
+        // top
+        for (var x = -radius; x <= radius; x += 0.01) {
+            shape.lineTo(x,y_slicez(x))
+        }
+        // bottom
+        for (var x = radius; x >= -radius; x -= 0.01) {
+            shape.lineTo(x,-y_slicez(x))
+        }
+        return shape
+    }
+
+    var slicez
+    slices.pop(slicez)
+
+    function make_slicez() {
+        slicez = new THREE.Mesh(
+            new THREE.ShapeBufferGeometry( getUpdatedSliceZShape() ),
+            slice_material)
+        slicez.rotation.set(0,0,0)
+        slicez.scale.set(scale,scale,scale)
+        slicez.position.set(0,0,slider_z*scale)
+        slicez.renderOrder = 1
+    }
+
+
+    /////////////////////////////////////////
+    // SLICE X
+    /////////////////////////////////////////
+
+    function getUpdatedSliceXGeometry() {
+        var geo = new THREE.Geometry()
+        geo.vertices.push(new THREE.Vector3( 0,-y_slicex(),0 ))
+        geo.vertices.push(new THREE.Vector3( 0,y_slicex(),0 ))
+        return geo
+    }
+
+    var slicex
+    slices.pop(slicex)
+
+    function make_slicex() {
+        slicex = new THREE.Line(
+            getUpdatedSliceXGeometry(),
+            line_material)
+        slicex.scale.set(scale,scale,scale)
+        slicex.position.set(slider_x*scale,0,slider_z*scale)
+        slicex.renderOrder = 2
+    }
+
+    /////////////////////////////////////////
+    // UPDATE SLICES
+    /////////////////////////////////////////
+
+    function updateSlices() {
+        // slice Z
+        scene.remove(slicez)
+        make_slicez()
+        scene.add(slicez)
+
+        // slice X
+        scene.remove(slicex)
+        make_slicex()
+        scene.add(slicex)
+
+    }
+    updateSlices()
+
+    /////////////////////////////////////////
+    // Animation Contols
+    /////////////////////////////////////////
+
+    //
+    // display text
+    //
+    const target1_x = document.getElementById("target1_x")
+    const target1_z = document.getElementById("target1_z")
+
+    function updateTarget1(x,z) {
+        katex.render(" x = " + format3dec(x), target1_x)
+        katex.render(" z = " + format3dec(z), target1_z)
+    }
+
+    //
+    // control sliders
+    //
+    const control_x = document.getElementById("control1_x")
+    function updateControlX(evt) {
+        const target = (evt.target) ? evt.target : evt.srcElement
+        const value = target.value
+        const radius = y_slicez(0)
+        slider_x = value * radius
+        updateSlices()
+        render()
+        updateTarget1(slider_x, slider_z)
+    }
+    control_x.addEventListener("input", updateControlX)
+    updateControlX({ target:control_x })
+
+    const control_z = document.getElementById("control1_z")
+    function updateControlZ(evt) {
+        var target = (evt.target) ? evt.target : evt.srcElement
+        var value = target.value
+        slider_z = value * zrange
+        updateSlices()
+        render()
+        updateTarget1(slider_x, slider_z)
+    }
+    control_z.addEventListener("input", updateControlZ)
+    updateControlZ({ target:control_z })
+
+}()
+
+/////////////////////////////////////////
+// Integration 1 : Z then X
+/////////////////////////////////////////
+
+_ = function() {
+
+    const xrange = 1
+    var slider_x, slider_z
+
+    var y_slicex = function(z) { return y(slider_x,z) }
+    var y_slicez = function()  { return y(slider_x,slider_z) }
+
+    /////////////////////////////////////////
+    // SLICE X
+    /////////////////////////////////////////
+
+    function getUpdatedSliceXShape() {
+        var shape = new THREE.Shape()
+        const radius = y_slicex(0)*2
+        shape.moveTo(-radius,0)
+        // top
+        for (var z = -radius; z <= radius; z += 0.01) {
+            shape.lineTo( z , y_slicex(z) )
+        }
+        // bottom
+        for (var z = radius; z >= -radius; z -= 0.01) {
+            shape.lineTo( z , -y_slicex(z) )
+        }
+        return shape
+    }
+
+    var slicex
+    slices.pop(slicex)
+
+    function make_slicex() {
+        slicex = new THREE.Mesh(
+            new THREE.ShapeBufferGeometry( getUpdatedSliceXShape() ),
+            slice_material)
+        slicex.rotation.set(0,Math.PI/2,0)
+        slicex.scale.set(scale,scale,scale)
+        slicex.position.set(slider_x*scale,0,0)
+        slicex.renderOrder = 3
+    }
+
+    /////////////////////////////////////////
+    // SLICE Z
+    /////////////////////////////////////////
+
+    function getUpdatedSliceZGeometry() {
+        var geo = new THREE.Geometry()
+        geo.vertices.push(new THREE.Vector3( 0,-y_slicez(), 0 ))
+        geo.vertices.push(new THREE.Vector3( 0, y_slicez(), 0 ))
+        return geo
+    }
+
+    var slicez
+    slices.pop(slicez)
+
+    function make_slicez() {
+        slicez = new THREE.Line(
+            getUpdatedSliceZGeometry(),
+            line_material)
+        slicez.scale.set(scale,scale,scale)
+        slicez.position.set(slider_x*scale,0,slider_z*scale)
+        slicez.renderOrder = 4
+    }
+
+    /////////////////////////////////////////
+    // UPDATE SLICES
+    /////////////////////////////////////////
+
+    function updateSlices() {
+        // slice X
+        scene.remove(slicex)
+        make_slicex()
+        scene.add(slicex)
+        // slice Z
+        scene.remove(slicez)
+        make_slicez()
+        scene.add(slicez)
+    }
+    updateSlices()
+
+    /////////////////////////////////////////
+    // Animation Contols
+    /////////////////////////////////////////
+
+    //
+    // display text
+    //
+    const target2_x = document.getElementById("target2_x")
+    const target2_z = document.getElementById("target2_z")
+
+    function updateTarget2(x,z) {
+        katex.render(" x = " + format3dec(x), target2_x)
+        katex.render(" z = " + format3dec(z), target2_z)
+    }
+
+    //
+    // control
+    //
+    const control_x = document.getElementById("control2_x")
+    function updateControlX(evt) {
+        const target = (evt.target) ? evt.target : evt.srcElement
+        const value = target.value
+        slider_x = xrange * value
+        updateSlices()
+        render()
+        updateTarget2(slider_x, slider_z)
+    }
+    control_x.addEventListener("input", updateControlX)
+    updateControlX({ target:control_x })
+
+    const control_z = document.getElementById("control2_z")
+    function updateControlY(evt) {
+        var target = (evt.target) ? evt.target : evt.srcElement
+        var value = target.value
+        const radius = y_slicex(0)
+        slider_z = radius * value
+        updateSlices()
+        render()
+        updateTarget2(slider_x, slider_z)
+    }
+    control_z.addEventListener("input", updateControlY)
+    updateControlX({ target:control_z })
+
+}()
+
+/////////////////////////////////////////
+// VOLUME
+/////////////////////////////////////////
+
+var volume
+var material = new THREE.MeshPhongMaterial({
+    color: 0x996633, 
+    specular: 0x222222,
+    shininess: 200,
+    needsUpdate: true,
+    depthTest: true,
+    transparent: true,
+    opacity: 0.5,
+})
+
+var stlloader = new THREE.STLLoader()
+stlloader.load( 'models/parabaloid.stl', function ( geometry ) {
+    geometry.computeFaceNormals();
+    geometry.computeVertexNormals();
+    volume = new THREE.Mesh( geometry, material )
+    volume.rotation.set( - Math.PI / 2, 0, 0 )  
+    volume.scale.set( scale,scale,scale )
+    volume.renderOrder = 0
+    scene.add( volume )
+})
+
+/////////////////////////////////////////
+// Animation Contols
+/////////////////////////////////////////
+
+// const control_opacity = document.getElementById("control_opacity")
+// const opacity_display = document.getElementById("opacity_display")
+
+// control_opacity.addEventListener("input", function() {
+//     volume.material.opacity = control_opacity.value
+//     opacity_display.innerText = control_opacity.value
+// })
+
+
+/////////////////////////////////////////
+// PLANE
+/////////////////////////////////////////
+
+var plane = new THREE.Mesh(
+    new THREE.PlaneBufferGeometry( 400, 400 ),
+    new THREE.MeshPhongMaterial({
+        color: 0x999999, specular: 0x101010, side: THREE.DoubleSide
+    })
+)
+plane.rotation.x = -Math.PI/2
+plane.position.y = 0
+plane.renderOrder = 0
+// scene.add( plane )
+
+function updatePlane(evt) {
+    const target = (evt.target) ? evt.target : evt.srcElement
+    plane.visible = target.checked
+    render()
+}
+// var control_plane = document.getElementById("control_plane")
+// control_plane.addEventListener("change", updatePlane)
+// updatePlane({ target:control_plane })
+
+/////////////////////////////////////////
+// Lighting
+/////////////////////////////////////////
+
+// ambient light
+scene.add(new THREE.AmbientLight( 0xffffff , 1 ))
+
+// directional light
+scene.add(new THREE.DirectionalLight( 0xffffff ))
+
+// point lights
+function makePointLight(x,y,z) {
+    var light = new THREE.PointLight( 0xaaaaaa, 4, 1000 )
+    light.position.set( x,y,z )
+    scene.add( light )
+}
+const light_dist = 200
+makePointLight( -light_dist, light_dist, light_dist )
+makePointLight(  light_dist,-light_dist,-light_dist )
+
+
+/////////////////////////////////////////
+// RENDER LOOP
+/////////////////////////////////////////
+
+function render() {
+    renderer.render(scene, camera)
+}
+
+function update(time) {
+    render()
+    controls.update()
+    requestAnimationFrame(update)
+}
+
+controls.addEventListener( 'change', render )
+requestAnimationFrame(update)
+
+/////////////////////////////////////////
+// Window Resizing
+/////////////////////////////////////////
+
+// window.addEventListener( 'resize', function () {
+//     camera.aspect = window.innerWidth / window.innerHeight
+//     camera.updateProjectionMatrix()
+//     renderer.setSize( window.innerWidth, window.innerHeight )
+//     controls.handleResize()
+//     render()
+// }, false )
+
+</script>
+
+</body>
+</html>

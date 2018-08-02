@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change of Variables - Polar Circle</title>
+<script type="text/javascript" src="js/three.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>r:</td><td><input id="slider_x" type="range" min="0" max="2" value="0" step="0.1"></td>
+    </tr>
+    <tr>
+        <td>t:</td><td><input id="slider_y" type="range" min="-2" max="2" value="0" step="0.1"></td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+
+//
+/////////////////////////////////////////
+// Parameters
+/////////////////////////////////////////
+//
+
+const scale = 50
+const grain = 0.1
+const size = 1
+const graph_separation = 250
+
+const axes_size = 1
+
+//
+/////////////////////////////////////////
+// Document Setup
+/////////////////////////////////////////
+//
+
+var getWidth    = function() { return window.innerWidth }
+var getHeight   = function() { return window.innerHeight }
+var getPixRatio = function() { return window.devicePixelRatio }
+
+//
+/////////////////////////////////////////
+// Scene Setup
+/////////////////////////////////////////
+//
+
+// scene
+var scene = new THREE.Scene()
+scene.background = new THREE.Color( 0x000000 ) // black
+
+// camera
+var camera = new THREE.OrthographicCamera(
+    -getWidth()/2, getWidth()/2,
+    getHeight()/2, -getHeight()/2,
+    1, 2000 )
+camera.position.set( 0,0,500 )
+camera.lookAt( scene.position )
+scene.add( camera )
+
+// renderer
+var renderer = new THREE.WebGLRenderer({
+    alpha: true,
+    antialias: true
+})
+renderer.setPixelRatio( getPixRatio() )
+renderer.setSize( getWidth(), getHeight() )
+document.body.appendChild( renderer.domElement )
+
+//
+/////////////////////////////////////////
+// MATH
+/////////////////////////////////////////
+//
+
+function cart_to_pol(x,y) {
+    let expr = Math.sqrt( Math.pow(x,2) + Math.pow(y,2) )
+    let atan = Math.atan2(y,x)
+    if (!atan) { atan = 0 }
+    return [ expr   // r
+           , atan ] // t
+}
+
+function pol_to_cart(r,t) {
+    return [ r * Math.cos(t)   // x
+           , r * Math.sin(t) ] // y
+}
+
+function id2(a,b) { return [a,b] }
+
+const PI = Math.PI
+
+//
+/////////////////////////////////////////
+// OBJECTS
+/////////////////////////////////////////
+//
+
+//
+// Lights
+//
+
+// ambient light
+// scene.add(new THREE.AmbientLight( 0xffffff , 1 ))
+
+// directional light
+// scene.add(new THREE.DirectionalLight( 0xffffff ))
+
+//
+// Globals
+//
+var pos = [0,0]
+
+function makeShape(trans) {
+    let
+        shape = new THREE.Shape()
+        x = pos[0],
+        y = pos[1],
+        s = size,
+        ta = function(a,b) { return trans(a,b)[0] },
+        tb = function(a,b) { return trans(a,b)[1] },
+        f1 = function(t) { return 1 },
+        f2 = function(t) { return 2 },
+        // f1 = function(t) { return 2*Math.sin(t) },
+        // f2 = function(t) { return 2 },
+        tmin = 0*PI,
+        tmax = 1.5*PI
+
+    // start
+    // shape.moveTo( x , y )
+    shape.moveTo( ta(f1(tmin)+x,tmin+y), tb(f1(tmin)+x,tmin+y) )
+
+    // outer (f1)
+    for (var t = tmin; t <= tmax; t += PI*0.01) {
+        shape.lineTo( ta(f1(t)+x,t+y), tb(f1(t)+x,t+y) )
+    }
+    // inner (f2)
+    for (var t = tmax; t >= tmin; t -= PI*0.01) {
+        shape.lineTo( ta(f2(t)+x,t+y), tb(f2(t)+x,t+y) )
+    }
+    
+    return shape
+}
+
+//
+// Cartesian
+//
+var cart_graph = new THREE.Group()
+cart_graph.position.set( -graph_separation,0,0 )
+cart_graph.scale.set( scale, scale, scale )
+scene.add( cart_graph )
+
+var cart_mesh
+
+// material
+var cart_material = new THREE.MeshBasicMaterial({
+    color: 0x00ff00,
+    needsUpdate: true
+})
+
+// shape
+function makeCartShape() {
+    return makeShape( pol_to_cart )
+}
+
+// mesh
+function makeCartMesh() {
+    return new THREE.Mesh(
+        new THREE.ShapeBufferGeometry( makeCartShape() ),
+        cart_material )
+}
+
+// update
+function updateCart() {
+    cart_graph.remove(cart_mesh)
+    scene.remove(cart_mesh)
+    
+    cart_mesh = makeCartMesh()
+    cart_mesh.position.set( 0,0,0 )
+    cart_mesh.rotation.set( 0,0,0 )
+
+    scene.add(cart_mesh)
+    cart_graph.add(cart_mesh)
+}
+
+//
+// Polar
+//
+var pol_graph = new THREE.Group()
+pol_graph.position.set( graph_separation,0,0 )
+pol_graph.scale.set( scale, scale, scale )
+scene.add( pol_graph )
+
+var pol_mesh
+
+// material
+var pol_material = new THREE.MeshBasicMaterial({
+    color: 0xff0000,
+    needsUpdate: true
+})
+
+// shape
+function makePolShape() {
+    return makeShape( id2 )
+}
+
+// mesh
+function makePolMesh() {
+    return new THREE.Mesh(
+        new THREE.ShapeBufferGeometry( makePolShape() ),
+        pol_material )
+}
+
+// update
+function updatePol() {
+    pol_graph.remove(pol_mesh)
+    scene.remove(pol_mesh)
+
+    pol_mesh = makePolMesh()
+    pol_mesh.position.set( 0,0,0 )
+    pol_mesh.rotation.set( 0,0,0 )
+
+    scene.add(pol_mesh)
+    pol_graph.add(pol_mesh)
+}
+
+//
+// Axes
+//
+var cart_axes, pol_axes
+var axes_material = new THREE.LineBasicMaterial({ color: 0xffffff })
+
+// Cartesian
+
+function makeAxisLine(graph,x1,y1,z1,x2,y2,z2) {
+    let geo = new THREE.Geometry()
+    geo.vertices.push(new THREE.Vector3( x1, y1, z1 ))
+    geo.vertices.push(new THREE.Vector3( x2, y2, z2 ))
+    let line = new THREE.Line( geo, axes_material )
+    line.scale.set( axes_size, axes_size, axes_size )
+    scene.add( line )
+    graph.add( line )
+    return line
+}
+
+var cart_axis_x = makeAxisLine(cart_graph, -3, 0, 0, /**/ 3, 0, 0 ) // x
+var cart_axis_y = makeAxisLine(cart_graph,  0,-3, 0, /**/ 0, 3, 0 ) // y
+
+
+// Polar
+function makeAxisCircle(graph, r) {
+    var resolution = 100
+    var amplitude = r
+    var size = 360 / resolution
+
+    var geometry = new THREE.Geometry()
+    for(var i = 0; i <= resolution; i++) {
+        var segment = ( i * size ) * Math.PI / 180
+        geometry.vertices.push(
+            new THREE.Vector3(
+                Math.cos( segment ) * amplitude,
+                Math.sin( segment ) * amplitude,
+                0 ))
+    }
+
+    var line = new THREE.Line( geometry, axes_material )
+    line.scale.set( axes_size, axes_size, axes_size )
+    scene.add(line)
+    graph.add(line)
+    return line
+}
+
+var pol_axis_r1  = makeAxisCircle(pol_graph, 1 )
+var pol_axis_r2  = makeAxisCircle(pol_graph, 2 )
+var pol_axis_r3  = makeAxisCircle(pol_graph, 3 )
+var pol_axis_t0  = makeAxisLine(pol_graph, -3, 0, 0, /**/ 3, 0, 0 )
+var pol_axis_tp2 = makeAxisLine(pol_graph,  0,-3, 0, /**/ 0, 3, 0 )
+
+
+//
+/////////////////////////////////////////
+// INITIALIZE
+/////////////////////////////////////////
+//
+
+updateCart()
+updatePol()
+
+//
+/////////////////////////////////////////
+// UPDATES
+/////////////////////////////////////////
+//
+
+function render() {
+    renderer.render(scene, camera)
+}
+
+function update(time) {
+    render()
+    requestAnimationFrame(update)
+}
+requestAnimationFrame(update)
+
+
+window.addEventListener( 'resize', function () {
+    camera.aspect = getWidth() / getHeight()
+    camera.updateProjectionMatrix()
+    renderer.setSize( getWidth(), getHeight() )
+    render()
+}, false )
+
+var slider_x = document.getElementById("slider_x")
+var slider_y = document.getElementById("slider_y")
+
+function updatePosition() {
+    pos[0] = parseFloat(slider_x.value)
+    pos[1] = parseFloat(slider_y.value*Math.PI/2)
+    // console.log(pos)
+    updateCart()
+    updatePol()
+    render()
+}
+slider_x.addEventListener("input", updatePosition)
+slider_y.addEventListener("input", updatePosition)
+updatePosition()
+
+</script>
+
+</body>
+</html>

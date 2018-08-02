@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div id="container">
+
+        <h1 class="title">K6 Stereographic Projection</h1>
+
+        <canvas id="canvas"></canvas>
+
+    </div>
+
+</body>
+<head>
+    <title>K6 Stereographic Projection</title>
+<style type="text/css">
+
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 1000px;
+    margin: auto;
+    box-shadow:
+         1px 0px 0px 0px black,
+        -1px 0px 0px 0px black;
+}
+
+.title {
+    text-align: center;
+}
+
+#canvas {
+    width: 100%;
+}
+
+</style>
+<script type="text/javascript" src="js/three.min.js"></script>
+<script type="text/javascript" src="js/TrackballControls.js"></script>
+<script type="text/javascript" src="K6_edges.js"></script>
+<script type="text/javascript" src="K6_vertices.js"></script>
+<script type="text/javascript">
+
+/////////////////////////////////////////
+// Parameters
+/////////////////////////////////////////
+
+const scale = 400
+
+/////////////////////////////////////////
+// Scene Setup
+/////////////////////////////////////////
+
+var container = document.getElementById("container")
+var container_style = window.getComputedStyle(container)
+
+var container_width = (
+    container_style.getPropertyCSSValue
+    ? parseInt(container_style.getPropertyCSSValue("width").cssText.replace("px",""))
+    : parseInt(container_style.getPropertyValue("width").replace("px",""))
+)
+
+// canvas
+var canvas = document.getElementById("canvas")
+canvas.width = container_width;
+canvas.height = container_width/1.7;
+
+// scene
+var scene = new THREE.Scene()
+scene.background = new THREE.Color( 0x000000 )
+
+// camera
+var camera = new THREE.PerspectiveCamera( 50, canvas.width / canvas.height, 1, 5000 )
+camera.position.set( 400,400,400 )
+camera.lookAt( scene.position )
+scene.add( camera )
+
+// renderer
+var renderer = new THREE.WebGLRenderer({
+    alpha: true,
+    antialias: true,
+    canvas: canvas
+})
+renderer.shadowMap.enabled = true
+renderer.shadowMap.type = THREE.PCFSoftShadowMap
+renderer.setSize( canvas.width, canvas.height )
+
+/////////////////////////////////////////
+// Trackball Controller
+/////////////////////////////////////////
+
+var controls = new THREE.TrackballControls( camera, renderer.domElement )
+controls.rotateSpeed = 10.0
+controls.zoomSpeed = 1;
+controls.panSpeed = 0.8
+controls.noZoom = false
+controls.noPan = true
+controls.staticMoving = false
+controls.dynamicDampingFactor = 0.2
+
+/////////////////////////////////////////
+// Scene
+/////////////////////////////////////////
+
+var wireframe = new THREE.Group()
+scene.add(wireframe)
+wireframe.scale.set(scale,scale,scale)
+
+function drawLine(source, target) {
+    let mat = new THREE.LineBasicMaterial({ color: 0x00ffff })
+    let geo = new THREE.Geometry()
+    geo.vertices.push(new THREE.Vector3( source[0],source[1],source[2] ))
+    geo.vertices.push(new THREE.Vector3( target[0],target[1],target[2] ))
+    let line = new THREE.Line( geo, mat )
+    wireframe.add( line )
+}
+for (var i in edges) { drawLine(edges[i][0], edges[i][1]) }
+
+// position in center of mass in center of view
+var count = vertices.length
+var sums = [0,0,0]
+for (var i in vertices) {
+    for (var j = 0; j < 3; j++) { sums[j] += vertices[i][j] }
+}
+var averages = [0,0,0]
+for (var i = 0; i < 3; i++) { averages[i] = sums[i] / (2*count) }
+wireframe.position.set( -averages[0]*scale*2, -averages[1]*scale*2, -averages[2]*scale*2 )
+
+
+/////////////////////////////////////////
+// UPDATES
+/////////////////////////////////////////
+
+function render() {
+    renderer.render(scene, camera)
+}
+
+function update(time) {
+    controls.update()
+    render()
+    requestAnimationFrame(update)
+}
+
+controls.addEventListener( 'change', render )
+requestAnimationFrame(update)
+
+</script>
+</head>
+</html>

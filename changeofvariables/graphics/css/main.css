@@ -1,0 +1,32 @@
+:root {
+    --doc-width: 900px;
+}
+
+body {
+    margin: 0px;
+    padding: 20px;
+    /*overflow: hidden;*/
+}
+
+input {
+    width: 200px;
+}
+
+#container {
+    margin: auto;
+    width: var(--doc-width);
+}
+
+#canvas {
+    margin-top: 40px;
+    width: var(--doc-width);
+    box-shadow: 0px 0px 10px 5px black;
+
+    transition: 0.25s;
+}
+
+#canvas:hover {
+    box-shadow: 0px 0px 0px 0px black;
+
+    transition: 0.25s;
+}

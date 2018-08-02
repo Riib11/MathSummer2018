@@ -1,0 +1,68 @@
+/*
+Try dragging the brown circle around. The blue box marks the draggable area of the circle's center.
+
+At the bottom of the JS code, the 'draw' function is called. Try changing the input arguments to see what happens!
+*/
+
+#widget {
+  /*border: 1px solid black;*/
+  padding: 10px;
+  overflow: hidden;
+}
+
+#widget-container {
+  margin: 20px;  
+}
+
+#markerbounds {
+  margin: auto;
+  position: relative;
+}
+
+#box {
+  margin: auto;
+  background-color: white;
+  box-shadow: 0px 0px 0px 1px black;
+  position: absolute;
+}
+
+#marker {
+  position: relative;
+  background-color: #00aaaa;
+  box-shadow: 0px 0px 0px 5px black;
+  border-radius: 100px;
+}
+
+#marker:hover {
+  
+}
+
+#marker:active {
+  background-color: #00FFFF;
+}
+
+#coord {
+  font-family: serif;
+  font-size: 14px;
+  margin: 0px;
+}
+
+#marker-v {
+  position: relative;
+  display: block;
+  background-color: black;
+  width: 1000px;
+  height: 1px;
+  margin-left: -500px;
+  vertical-align: center;
+  top: 8px;
+}
+
+#marker-h {
+  display: block;
+  background-color: black;
+  height: 1000px;
+  width: 1px;
+  margin-top: -500px;
+  vertical-align: center;
+}
