@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Iterated Integrals | Cone</title>
+<meta charset="utf-8"/>
+<script type="text/javascript" src="js/three.min.js"></script>
+<script type="text/javascript" src="js/TrackballControls.js"></script>
+<script type="text/javascript" src="js/STLLoader.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+<link   rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="katex.min.js"></script>
+<link   rel="stylesheet" type="text/css" href="katex.min.css">
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+
+<div id="container">
+
+    <h1>Interated Integration</h1>
+
+    <h2>Introduction</h2>
+
+    <p>
+        Suppose we have a integrable volume \(S\) in three dimensions. To find it's volume, we must choose an order of integration. If we have integration variables \(a,b,c\), then a possible integration ordering is \(a\) then \(b\) then \(c\) which is represented by \(\iiint \text{d}a\text{d}b\text{d}c\). Below two possible integration orderings are implemented for several volumes. Notice that, however, not all orderings are equally nice. The goal of this exercise is to give you an intuition for recognizing <i>good</i> orders of integrations. By a <i>good</i> ordering, I mean that it would be the easiest to write and calculate by hand.
+    </p>
+    <p>
+        Moving a slider will translate a plane through \(S\) and show the intersection, where all the plane's points have that variable's value on the slider. For example, consider the ordering \(\iiint \text{d}a\text{d}b\text{d}c\). Moving an \(a\)-slider translates the plane \(a = a_i\) and shows the blue intersection between it and \(S\), where \(a_i\) is the value along the \(y\)-slider. Since \(a\) is the first to be integrated, this intersection will be two-dimensional. Subsequently moving the \(b\)-slider translates the plane \(b = b_i\) and shows the green intersection between it, \(a = a_i\), and \(S\), where \(b_i\) is the value along the \(b\)-slider. Since \(b\) is the second to be integrated, this intersection will be one-dimensional.
+    </p>
+
+    <h2>Cone</h2>
+
+    <p>
+        Below is the solution to \(1 \leq z \leq x^2 + y^2\), a cone. Play with both integration orders to get a feeling for the kinds of slices they produce. Determine which integration ordering is the best.
+    </p>
+    <p>
+        <i>Note:</i> If you are having trouble deciding what looks "good", try writing the integral on paper using each ordering.
+    </p>
+
+    <div class="controls">
+        <table class="controlstable">
+            <tr>
+                <td></td>
+                <td id="int1_zxy">
+                    <script type="text/javascript">
+                        katex.render("\\iiint \\text{d}y \\text{d}x \\text{d}z",
+                            document.getElementById("int1_zxy"))    
+                    </script>
+                </td>
+                <td></td>
+                <td id="int1_yxz">
+                    <script type="text/javascript">
+                        katex.render("\\iiint \\text{d}z \\text{d}x \\text{d}y",
+                            document.getElementById("int1_yxz"))    
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td id="z1" class="number_display">
+                    <script type="text/javascript">
+                        katex.render("y", document.getElementById("z1"))    
+                    </script>
+                </td>
+                <td><input id="control1_z" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+
+                <td id="y2" class="number_display">
+                    <script type="text/javascript">
+                        katex.render("z", document.getElementById("y2"))
+                    </script>
+                </td>
+                <td><input id="control2_y" class="slider" type="range" min="0" max="1" value="0" step="0.01"></td>
+            </tr>
+            <tr>
+                <td id="x1" class="number_display">
+                    <script type="text/javascript">
+                        katex.render("x", document.getElementById("x1"))    
+                    </script>
+                </td>
+                <td><input id="control1_x" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+                
+                <td id="x2" class="number_display">
+                    <script type="text/javascript">
+                        katex.render("x", document.getElementById("x2"))    
+                    </script>
+                </td>
+                <td><input id="control2_x" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+                
+            </tr>
+        </table>
+        <table>
+            <tr class="nodisplay">
+                <td>Axes:</td>
+                <td><input id="control_axes" type="checkbox"</td>
+            </tr>
+            <tr class="nodisplay">
+                <td>XZ-Plane:</td>
+                <td><input id="control_plane" type="checkbox"</td>
+            </tr>
+            <tr>
+                <td style="width: 170px">Volume Opacity = <span id="opacity_display"></span></td>
+                <td><input id="control_opacity" class="slider" type="range" min="0" max="1" value="0.38" step="0.01"></td>
+            </tr>
+            <tr class="nodisplay">
+                <td>Intersection Plane:</td>
+                <td><input id="toggle_intersectionplane" type="checkbox" checked="false"></td>
+            </tr>
+        </table>
+    </div>
+
+    <center><canvas id="canvas1"></canvas></center>
+
+<script type="text/javascript" src="js/cone.js"></script>
+
+    <h2>Parabaloid</h2>
+
+    <p>
+        Here, we have the solution to \( \frac{1}{2}x^2 + y^2 + z^2 = 1 \), a parabaloid. Play with the orderings again to find the best ordering. In the process, abstract a useful hueristic for recognizing good slices by considering both this example and the previous.
+    </p>
+    <p>
+        <i>Hint:</i> Compare the two-dimensional slices of each ordering.
+    </p>
+
+    <div class="controls">
+        <table class="control2_stable">
+            <tr>
+                <td></td>
+                <td id="int2_zxy">
+                    <script type="text/javascript">
+                        // Integrate Z-X-Y
+                        // katex.render("\\int \\text{d}z \\int \\text{d}x \\int \\text{d}y",
+                        //     document.getElementById("int2_zxy"))
+                        katex.render("\\iiint \\text{d}y \\text{d}x \\text{d}z",
+                            document.getElementById("int2_zxy"))
+                    </script>
+                </td>
+                <td></td>
+                <td id="int2_xzy">
+                <script type="text/javascript">
+                    // Integrate X-Z-Y
+                    // katex.render("\\int \\text{d}x \\int \\text{d}z \\int \\text{d}y",
+                    //     document.getElementById("int2_xzy"))
+                    katex.render("\\iiint \\text{d}x \\text{d}y \\text{d}z",
+                        document.getElementById("int2_xzy"))
+                </script>
+            </td>
+            </tr>
+            <tr>
+                <td><div id="target2_1_z" class="number_display"></div></td>
+                <td><input id="control2_1_z" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+                
+
+                <td><div id="target2_2_x" class="number_display"></div></td>
+                <td><input id="control2_2_x" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+            </tr>
+            <tr>
+                <td><div id="target2_1_x" class="number_display"></div></td>
+                <td><input id="control2_1_x" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+
+                <td><div id="target2_2_z" class="number_display"></div></td>
+                <td><input id="control2_2_z" class="slider" type="range" min="-2" max="2" value="-2" step="0.01"></td>
+            </tr>
+        </table>
+
+        <!-- <table>
+            <hr>
+            <tr>
+                <td>Axes:</td>
+                <td><input id="control2__axes" type="checkbox"</td>
+            </tr>
+            <tr>
+                <td>XZ-Plane:</td>
+                <td><input id="control2__plane" type="checkbox"</td>
+            </tr>
+            <tr>
+                <td>Volume Opacity = <span id="opacity_display"></span></td>
+                <td><input id="control2__opacity" class="slider" type="range" min="0" max="1" value="0.7" step="0.01"></td>
+            </tr>
+        </table> -->
+        
+    </div>
+
+    <center><canvas id="canvas2"></canvas></center>
+
+<script type="text/javascript" src="js/parabaloid.js"></script>
+
+    <h2>Steinmetz Solid</h2>
+
+    <p>
+        Here, we have the solution to
+    </p>
+    $$
+    \begin{cases}
+        1 &\geq x^2 + y^2 \\
+        1 &\geq y^2 + z^2
+    \end{cases},
+    $$
+    <p>
+        which is, in fact, the intersection of those two cyliders. As with the previous examples, find the best order of integration for this volume. Make use of the pattern's you've noticed so far, and relate them to the symmetries of the volume itself.
+    </p>
+
+<div class="controls">
+        <table class="controlstable">
+            <tr>
+                
+                <td>
+
+                <td id="int3_zxy" class="td_slider">
+                    <!-- Integrate Z-X-Y -->
+                    <script type="text/javascript">
+                        // katex.render("\\int \\text{d}z \\int \\text{d}x \\int \\text{d}y",
+                        //     document.getElementById("int_zxy"))
+                        katex.render("\\iiint \\text{d}y \\text{d}x \\text{d}z",
+                            document.getElementById("int3_zxy"))
+                    </script>
+                </td>
+
+                <td>
+
+                <td id="int3_xzy" class="td_slider">
+                    <!-- Integrate X-Z-Y -->
+                    <script type="text/javascript">
+                        // katex.render("\\int \\text{d}x \\int \\text{d}z \\int \\text{d}y",
+                        //     document.getElementById("int_xzy"))
+                        katex.render("\\iiint \\text{d}x \\text{d}y \\text{d}z",
+                            document.getElementById("int3_xzy"))
+                    </script>
+                </td>
+
+            </tr>
+            <tr>
+                <td><div id="target2_1_1_z" class="number_display"></div></td>
+                <td><input id="control1_1_z" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+
+                <td><div id="target2_1_2_x" class="number_display"></div></td>
+                <td><input id="control1_2_x" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+
+            </tr>
+            <tr>
+                <td><div id="target2_1_1_x" class="number_display"></div></td>
+                <td><input id="control1_1_x" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+
+                <td><div id="target2_1_2_z" class="number_display"></div></td>
+                <td><input id="control1_2_z" class="slider" type="range" min="-1" max="1" value="-1" step="0.01"></td>
+
+            </tr>
+
+        </table>
+    </div>
+
+    <center><canvas id="canvas3"></canvas></center>
+    
+<script type="text/javascript" src="js/steinmetz.js"></script>
+
+</div>
+
+</body>
+</html>

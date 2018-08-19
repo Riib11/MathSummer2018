@@ -1,0 +1,17 @@
+body {
+    padding: 40px;
+}
+
+.content {
+    box-shadow: 0px 0px 10px 1px black;
+    margin: auto;
+    width: 500px;
+    padding-left: 0.75in;
+    padding-right: 0.75in;
+}
+
+.section-title {
+    padding-top: 20px;
+    font-weight: bold;
+    box-shadow: 0px 1px 0px 0px black;
+}

@@ -1,0 +1,28 @@
+:root {
+    --doc-width: 900px;
+}
+
+body {
+    margin: 0px;
+    padding: 20px;
+    /*overflow: hidden;*/
+}
+
+input {
+    width: 200px;
+}
+
+#container {
+    margin: auto;
+    width: var(--doc-width);
+}
+
+#canvas {
+    margin-top: 40px;
+    width: var(--doc-width);
+}
+
+.content-description {
+    width: 700px;
+    margin: auto;
+}

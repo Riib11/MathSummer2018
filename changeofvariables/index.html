@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change of Variables</title>
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- katex -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+
+<div class="content">
+
+    <div class="title">Change of Variables</div>
+
+    <div class="section-title">Prerequisites</div>
+    <ul>
+        <li>linear/Affine transformations</li>
+        <li>multi-dimensional integration</li>
+        <li>determinant</li>
+    </ul>
+
+    <div class="section-title">Introduction</div>
+
+    <p>
+        Although the typical cartesian coordinate system is extremeley useful, there are a few other coordinate systems that prove better to describe and integrate over certain surfaces. But before looking at specific examples, let's understand how exactly to utilize this knowledge.
+    </p>
+    <p>
+        Suppose we are given a surface \(A\), described to us using coordinate system \(X\) such that \( \int_A \text{d}A = \int_{x=a}^b \text{d} x \). But, we want to integrate over \(A\) in coordinate system \(Y\). We know the relation between the coordinate systems, and can describe the way to get the \(Y\)-coordinates of a point from its \(X\)-coordinates as a function \(\Phi\). So, we can describe a surface \(B\) in \(Y\)-coordinates such that \(\Phi(B) = A\), and let \( (f(a),f(b)) \) reflect \(B\)'s boundary in \(Y\)-coordinates. It may seem like the next step is as simple as following
+    </p>
+    <p>
+        $$
+        \int_{A} \text{d}A =
+        \int_{x=a}^b \text{d} x =
+        \int_{y=f(a)}^{f(b)} \Phi(y) \text{d}y =
+        \int_{B} \text{d}B
+        $$
+    </p>
+    <p>
+        but it isn't quite so straightforward. Changing coordinates (or <i>changing variables</i>) introduces complications into integration because it turns out that it has the potential to warp volumes. So a volume might "look" bigger in \(Y\)-coordinates than it does in \(X\) coordinates, and we need to take that into account when integrating. The factor by which the change of variables warps volumes is measured by the determinant of the jacobian \(\Phi^\prime(y)\), so we can now correctly write
+    </p>
+    <p>
+        $$
+        \int_{A} \text{d}A =
+        \int_{x=a}^b \text{d} x =
+        \int_{y=f(a)}^{f(b)} |\Phi(y)^\prime| \Phi(y) \text{d}y =
+        \int_{B} \text{d}B
+        $$
+    </p>
+    <p>
+        The proof that \(\Phi^\prime\) does the job for us requires some more background, but ultimately it is a direct consequence of the <a href="http://mathworld.wolfram.com/CurlTheorem.html">Curl Theorem</a>, which is in turn a special case of <a href="http://mathworld.wolfram.com/StokesTheorem.html">Stokes' Theorem</a>. Additionally, when you write more complicated changes of variables with multiple steps, the jacobian will
+    </p>
+
+    <div class="section-title">Demonstrations</div>
+
+    <p>
+        Below are two examples of change of variables in action, one using the polar map and the other using the complex map, both targetting catersian coordinates. Try playing around with the demos to get a feeling for how the areas and jacobians (represented by the red square on the right-side graph) are effected by the change of variables.
+    </p>
+
+    <ul>
+        <li><a href="polar_grid.html">polar</a></li>
+        <li><a href="uv_grid.html">complex</a></li>
+    </ul>
+    
+
+</div>
+
+</body>
+</html>

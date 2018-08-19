@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iterated Integrals | Introduction</title>
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- katex -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+
+<div class="content">
+
+    <div class="title">Iterated Integration</div>
+
+    <div class="section-title">Prerequisites</div>
+    <ul>
+        <li>Definition of the integral</li>
+    </ul>
+
+    <div class="section-title">Introduction</div>
+
+    <p>
+        The integral is a way of measuring the volume of a surface. The simplest surface is the one-dimensional interval, let's say from \(a\) to \(b\). To express the 1-volume of this surface, we can write the integral
+    </p>
+    <p>
+        $$ \int_{x=a}^b \text{d}x. $$
+    </p>
+    <p>
+        Multiple integrals can be written in interation in order to express higher-dimensional volumes. For example, a simple two-dimensional surface is a unit square, with its lower-right corner at \((0,0)\). The area (2-volume) of this square is expressed by the integral
+    </p>
+    <p>
+        $$ \int_{x=0}^1 \int_{y=0}^1 \text{d}x \text{d}y. $$
+    </p>
+    <p>
+        For each dimension you are measuring over, you need another integral. You may also integrate over expressions that are not only products of infinitesimals. For example, you could express the integration over a function \(f(x)\) with
+    </p>
+    <p>
+        $$ \int_{x=a}^b f(x) \text{d}x. $$
+    </p>
+    <p>
+        Integrating over an expression in this way can be interpretted in the same context as the previous examples, except for that the \(f(x)\) essencially introduces an additional dimension of height that you integrate over from \(0\) to \(f(x)\). This is reflected by the roughly equivelant integral
+    </p>
+    <p>
+        $$ \int_{x=a}^b \int_{i=0}^{f(x)} \text{d}x \text{d}i. $$
+    </p>
+    <p>
+        The above expression works conceptually, but you will run into a few technicalities such as when \( f(x) < 0 \), but I will ignore those and assume the point is taken. The \( \int_{x=a}^b f(x) \text{d}x \) is indeed the same formulation that you've probably learned in high-school calculus. You used it to measure the area of the surface bounded between \(f(x)\) and \(0\), which is the "area under the curve".
+    </p>
+
+    <div class="section-title">Integration Order</div>
+
+    <p>
+        You may intuit that the order of these integrals seems arbitrary. What would it matter if you measured along one direction and then along another, or visa versa? Well, according to <a href="https://en.wikipedia.org/wiki/Fubini%27s_theorem">Fubini's Theorem</a>, when an inner integral does not have variables that depend on outer-more integrals the order of integration will not effect the result. So, in a strictly abstract sense the intuition is correct. But as is common in mathematics, aesthetics is key. Especially for weirdly-shaped surfaces, the order you chooes to integrate in will influence the simplicity of the expressions you need to describe the integration.
+    </p>
+    <p>
+        A helpfup visualization is to imagine the integration as a process of slicing up your surface, and let's say its a three-dimensional surface (requiring three integrals). The inner integral will slice in one direction, creating two-dimensional cross sections. Then, the middle integral will slice each of those cross-sections into one-dimensional strips of varying lengths. Then the outer integral will slice each of those strips into zero-dimensional bits, which sum up to give the lengths (1-volumes) of the strips, which sum up to give the areas of the cross-sections (2-volumes), which then finally sum up to give the volume of the three-dimensional surface (3-volume).
+    </p>
+
+    <div class="section-title">Demonstrations</div>
+
+    <p>
+        Of this visual shape, one way of slicing might give simple, regular cross-sections whereas a different way of slicing may give complex cross-sections that vary in non-regular ways across the surface. Play around with the examples below to get a sense of how this choice of integration order effects the shapes of the cross-sections and strips (terminology from the abstract visuatization above).
+    </p>
+
+    <ul>
+        <li><a href="cone.html">cone</a></li>
+        <li><a href="parabaloid.html">parabaloid</a></li>
+        <li><a href="steinmetz.html">steinmetz (intersection of two cylinders)</a></li>
+    </ul>
+    
+
+</div>
+
+</body>
+</html>
