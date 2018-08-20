@@ -1,5 +1,5 @@
 :root {
-    --doc-width: 900px;
+    --doc-width: 800px;
 }
 
 body {
@@ -15,6 +15,9 @@ input {
 #container {
     margin: auto;
     width: var(--doc-width);
+    padding: 40px;
+
+    box-shadow: 0px 0px 10px 3px black;
 }
 
 #canvas {
@@ -23,6 +26,9 @@ input {
 }
 
 .content-description {
-    width: 700px;
     margin: auto;
+}
+
+#container h1 {
+    text-align: center;
 }
