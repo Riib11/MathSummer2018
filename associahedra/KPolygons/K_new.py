@@ -1,6 +1,8 @@
 import math
 import itertools as it
+
 from mathematica import *
+import debug
 
 #####
 ####
@@ -27,6 +29,9 @@ class Polygon:
         for x in reversed(self.coxeter_graph.U):
             self.vertices.append(x)
 
+        # initialize divides_index
+        Divide.init_divides_indexing(self.V)
+
     # the minimum number of vertices, 
     # along the permimeter of the polygon,
     # between two vertices
@@ -47,7 +52,6 @@ class Polygon:
     # note: each side includes the divide's vertices
     def is_on_perimeter(self, d):
         assert ( isinstance(d, Divide) )
-
         return self.get_perimeter_distance(d) == 1
 
     # partition the polygon's vertices
@@ -59,15 +63,15 @@ class Polygon:
         assert ( isinstance(d, Divide) )
 
         side1 = [d.v1, d.v2]
-        v = d.v1 + 1
+        v = (d.v1 + 1) % self.V
         while v != d.v2:
             side1.append(v)
             v = (v + 1) % self.V
 
         side2 = [d.v1, d.v2]
-        v = d.v1 - 1
+        v = (d.v1 - 1) % self.V
         while v != d.v2:
-            side1.append(v)
+            side2.append(v)
             v = (v - 1) % self.V
 
         return side1, side2
@@ -84,6 +88,10 @@ class Polygon:
             or d_new.is_contained_in_vertices(side2))
         distinct = d != d_new
 
+        if non_intersecting and distinct and d == Divide(1,4) and d_new == Divide(0,3):
+            debug.log("valid divide", str(d)+", "+str(d_new))
+            debug.log("sides", str(side1)+", "+str(side2))
+
         return non_intersecting and distinct
 
 
@@ -91,7 +99,6 @@ class Polygon:
     # yield a valid triangulation?
     def is_valid_triangulation(self, ds):
         assert ( all([isinstance(d, Divide) for d in ds]) )
-
         return all([ self.is_valid_new_divide(d1, d2)
             for d1, d2 in it.combinations(ds, 2)])
 
@@ -100,15 +107,19 @@ class Polygon:
     def get_all_triangulations(self, dim):
         divides_count = self.N - dim
 
+        if divides_count < 0: return []
+        if divides_count == 0:
+            return [Triangulation(self.N, [], self, self.coxeter_graph)]
+
         all_divides = [ Divide(d1, d2)
             for d1, d2 in it.combinations(inrange(0, self.V - 1), 2)
             if not self.is_on_perimeter(Divide(d1, d2)) ]
 
-        print("all_divides:", all_divides)
+        debug.log("all_divides", all_divides)
 
         # proto-triangulations
         prototris = [ [d] for d in all_divides ]
-        for i in range(divides_count):
+        for _ in range(divides_count-1):
             prototris_new = []
             for tri in prototris:
                 for d in all_divides:
@@ -117,7 +128,7 @@ class Polygon:
                         prototris_new.append(tri_new)
             prototris = prototris_new
 
-        print("prototris:",prototris)
+        debug.log("prototris:", prototris)
 
         # convert to Triangulation type
         # and remove duplicates
@@ -145,11 +156,24 @@ class Divide:
     def __eq__(self, other):
         return [self.v1, self.v2] == [other.v1, other.v2]
 
-    # TODO
-    def tostring(): pass
-
+    def tostring(self):
+        return "d("+str(self.v1)+","+str(self.v2)+")"
     __str__ = tostring
     __repr__ = tostring
+
+    @classmethod
+    def init_divides_indexing(cls, V):
+        divides_ordering = [ Divide(v1, v2)
+            for v1, v2 in it.combinations(inrange(0, V - 1), 2) ]
+
+        # uses custom Divide equality
+        def get_divide_index(d):
+            assert ( isinstance(d, Divide) )
+            assert ( d in divides_ordering )
+            return divides_ordering.index(d)
+
+        cls.get_divide_index = get_divide_index
+
 
 #
 ### Triangulation
@@ -159,82 +183,51 @@ class Triangulation:
         assert ( polygon.is_valid_triangulation(ds) )
 
         self.N = N
-        self.ds = ds
+        self.ds = sorted(ds, key=Divide.get_divide_index)
         self.polygon = polygon
         self.coxeter_graph = coxeter_graph
 
-    def mu(self, i, j):
-        assert ( 1 <= i <= self.N )
-        assert ( 0 <= j <= self.N + 1 )
+    def tostring(self): return "Tri"+str(self.ds)
+    __str__ = tostring
+    __repr__ = tostring
 
-        # path i -> j only along labels <= i
-        x = i - 1
-        count = 1
-        while i <= x:
-            if x == j: return count
-            count += 1
-            x = (x - 1) % self.N
-        # path i -> j only along labels >= i
-        x = i + 1
-        count = 1
-        while i >= x:
-            if x == j: return count
-            count += 1
-            x = (x + 1) % self.N
+    def issubset(self, other):
+        assert ( isinstance(other, Triangulation) )
+        return all([ d in other.ds for d in self.ds ])
+
+    def __eq__(self, other):
+        assert ( isinstance(other, Triangulation) )
+        return (self.issubset(other)) and (other.issubset(self))
+
+    def mu(self, i, j):
+        if   i >  j: return i - j
+        elif i <= j: return j - i
 
     def L(self, i):
-        assert ( 1 <= i <= self.N )
-
-        return [ a for (a, i) in self.ds
-            if 0 <= a and a < i]
+        return [ a for a in inrange(0, i - 1)
+            if Divide(a, i) in self.ds ]
 
     def R(self, i):
-        assert ( 1 <= i <= self.N )
-
-        return [ b for (b, i) in self.ds
-            if i < b <= self.N + 1]
+        return [ b for b in inrange(i + 1, self.N + 1)
+            if Divide(b, i) in self.ds ]
 
     def p_L(self, i):
-        assert ( 1 <= i <= self.N )
-
-        x = max([ self.mu(i, a) for a in self.L(i) ])
-
-        assert ( 1 <= x <= self.N + 2)
-        return 
+        return safemax([ self.mu(i, a) for a in self.L(i) ])
 
     def p_R(self, i):
-        assert ( 1 <= i <= self.N )
-
-        return max([ self.mu(i, b) for b in self.R(i) ])
+        return safemax([ self.mu(i, b) for b in self.R(i) ])
 
     def w(self, i):
-        assert ( 1 <= i <= self.N )
-
         return self.p_L(i) * self.p_R(i)
 
     def x(self, i):
-        assert ( 1 <= i <= self.N )
-
         if self.coxeter_graph.is_Down(i):
             return self.w(i)
         else:
             return self.N + 1 - self.w(i)
 
-    def issubset(self, other):
-        assert ( isinstance(other, Triangulation) )
-
-        return [ d in other.ds for d in self.ds ]
-
-    def __eq__(self, other):
-        assert ( isinstance(other, Triangulation) )
-
-        return (self.issubset(other)) and (other.issubset(self))
-
-    # TODO
-    def tostring(): pass
-
-    __str__ = tostring
-    __repr__ = tostring
+    def get_embedded_point(self):
+        return [ self.x(i) for i in inrange(1, self.N) ]
 
 #
 ### Coxeter Graph
@@ -267,17 +260,22 @@ def inrange(a, b=None): # [a, ..., b] inclusive
     if not b: a, b = 1, a
     return [i for i in range(a, b + 1)]
 
+def safemax(xs): return max(xs) if len(xs) > 0 else 1
+
 #####
 ####
 ### Construction
 ##
 #
 
-N = 3
-coxeter_graph = CoxeterGraph(N)
-polygon = Polygon(N, coxeter_graph)
+N   = 3
+dim = 1
 
-print("triangulations:", polygon.get_all_triangulations(1) )
+coxeter_graph  = CoxeterGraph(N)
+polygon        = Polygon(N, coxeter_graph)
+triangulations = polygon.get_all_triangulations(dim)
 
-# TODO
-def get_imbedded_point(self): pass
+debug.log("triangulations", triangulations)
+debug.log("len = ", len(triangulations))
+debug.log("embedded points", to_table([tri.get_embedded_point()
+    for tri in triangulations]))
