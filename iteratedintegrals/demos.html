@@ -21,19 +21,19 @@
     <h2>Introduction</h2>
 
     <p>
-        Suppose we have a integrable volume \(S\) in three dimensions. To find it's volume, we must choose an order of integration. If we have integration variables \(a,b,c\), then a possible integration ordering is \(a\) then \(b\) then \(c\) which is represented by \(\iiint \text{d}a\text{d}b\text{d}c\). Below two possible integration orderings are implemented for several volumes. Notice that, however, not all orderings are equally nice. The goal of this exercise is to give you an intuition for recognizing <i>good</i> orders of integrations. By a <i>good</i> ordering, I mean that it would be the easiest to write and calculate by hand.
+        Suppose we have a integrable region \(S\) in \(\mathbb{R}^2\). To find it's volume, we need to compute \(\int_S 1\) via iterated integration. In order to do so, we want to choose and easily computable order of integration. Below, two possible integration orderings are implemented for several different \(S\).
     </p>
     <p>
-        Moving a slider will translate a plane through \(S\) and show the intersection, where all the plane's points have that variable's value on the slider. For example, consider the ordering \(\iiint \text{d}a\text{d}b\text{d}c\). Moving an \(a\)-slider translates the plane \(a = a_i\) and shows the blue intersection between it and \(S\), where \(a_i\) is the value along the \(y\)-slider. Since \(a\) is the first to be integrated, this intersection will be two-dimensional. Subsequently moving the \(b\)-slider translates the plane \(b = b_i\) and shows the green intersection between it, \(a = a_i\), and \(S\), where \(b_i\) is the value along the \(b\)-slider. Since \(b\) is the second to be integrated, this intersection will be one-dimensional.
+        Moving a slider will translate a plane through \(S\) and show the intersection. For example, consider the ordering \(\iiint \text{d}c \text{d}b \text{d}a \). Moving the \(a\)-slider translates a plane perpendicular to the \(a\)-axis  and shows the blue interesection between it and \(S\). Subsequently moving the \(b\)-slider translates a plane perpedicular to the \(b\)-axis and shows the intersection between it, the \(a\)-axis plane, and \(S\).
     </p>
 
     <h2>Cone</h2>
 
     <p>
-        Below is the solution to \(1 \leq z \leq x^2 + y^2\), a cone. Play with both integration orders to get a feeling for the kinds of slices they produce. Determine which integration ordering is the best.
+        Below is the solution to \(1 \leq z \leq x^2 + y^2\), a solid cone. Play with both integration orders to get a feeling for the kinds of slices they produce. Determine which integration ordering is the best.
     </p>
     <p>
-        <i>Note:</i> If you are having trouble deciding what looks "good", try writing the integral on paper using each ordering.
+        <i>Hint:</i> If you are having trouble deciding which is a nicer ordering, try writing the integral on paper using each ordering.
     </p>
 
     <div class="controls">
@@ -42,14 +42,14 @@
                 <td></td>
                 <td id="int1_zxy">
                     <script type="text/javascript">
-                        katex.render("\\iiint \\text{d}y \\text{d}x \\text{d}z",
+                        katex.render("\\iiint \\text{d}z \\text{d}x \\text{d}y",
                             document.getElementById("int1_zxy"))    
                     </script>
                 </td>
                 <td></td>
                 <td id="int1_yxz">
                     <script type="text/javascript">
-                        katex.render("\\iiint \\text{d}z \\text{d}x \\text{d}y",
+                        katex.render("\\iiint \\text{d}y \\text{d}x \\text{d}z",
                             document.getElementById("int1_yxz"))    
                     </script>
                 </td>
@@ -110,13 +110,10 @@
 
 <script type="text/javascript" src="js/cone.js"></script>
 
-    <h2>Parabaloid</h2>
+    <h2>Ellipsoid</h2>
 
     <p>
-        Here, we have the solution to \( \frac{1}{2}x^2 + y^2 + z^2 = 1 \), a parabaloid. Play with the orderings again to find the best ordering. In the process, abstract a useful hueristic for recognizing good slices by considering both this example and the previous.
-    </p>
-    <p>
-        <i>Hint:</i> Compare the two-dimensional slices of each ordering.
+        Here, we have the solution to \( \frac{1}{2}x^2 + y^2 + z^2 \leq 1 \), an ellipsoid. Play with the sliders to find the best ordering. In the process, abstract a useful hueristic for recognizing good slices by considering both this example and the previous.
     </p>
 
     <div class="controls">
@@ -128,7 +125,7 @@
                         // Integrate Z-X-Y
                         // katex.render("\\int \\text{d}z \\int \\text{d}x \\int \\text{d}y",
                         //     document.getElementById("int2_zxy"))
-                        katex.render("\\iiint \\text{d}y \\text{d}x \\text{d}z",
+                        katex.render("\\iiint \\text{d}z \\text{d}x \\text{d}y",
                             document.getElementById("int2_zxy"))
                     </script>
                 </td>
@@ -138,7 +135,7 @@
                     // Integrate X-Z-Y
                     // katex.render("\\int \\text{d}x \\int \\text{d}z \\int \\text{d}y",
                     //     document.getElementById("int2_xzy"))
-                    katex.render("\\iiint \\text{d}x \\text{d}y \\text{d}z",
+                    katex.render("\\iiint \\text{d}z \\text{d}y \\text{d}x",
                         document.getElementById("int2_xzy"))
                 </script>
             </td>
@@ -191,10 +188,10 @@
     \begin{cases}
         1 &\geq x^2 + y^2 \\
         1 &\geq y^2 + z^2
-    \end{cases},
+    \end{cases}
     $$
     <p>
-        which is, in fact, the intersection of those two cyliders. As with the previous examples, find the best order of integration for this volume. Make use of the pattern's you've noticed so far, and relate them to the symmetries of the volume itself.
+        which is, in fact, the intersection of two slid cyliders (conventionally called the Stenmetz solid). As with the previous examples, find the best order of integration for this region. Make use of the pattern's you've noticed so far, and relate them to the symmetries of the volume itself.
     </p>
 
 <div class="controls">
@@ -208,7 +205,7 @@
                     <script type="text/javascript">
                         // katex.render("\\int \\text{d}z \\int \\text{d}x \\int \\text{d}y",
                         //     document.getElementById("int_zxy"))
-                        katex.render("\\iiint \\text{d}y \\text{d}x \\text{d}z",
+                        katex.render("\\iiint \\text{d}z \\text{d}x \\text{d}y",
                             document.getElementById("int3_zxy"))
                     </script>
                 </td>
@@ -220,7 +217,7 @@
                     <script type="text/javascript">
                         // katex.render("\\int \\text{d}x \\int \\text{d}z \\int \\text{d}y",
                         //     document.getElementById("int_xzy"))
-                        katex.render("\\iiint \\text{d}x \\text{d}y \\text{d}z",
+                        katex.render("\\iiint \\text{d}z \\text{d}y \\text{d}x",
                             document.getElementById("int3_xzy"))
                     </script>
                 </td>

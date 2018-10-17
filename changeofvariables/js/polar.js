@@ -49,7 +49,7 @@ renderer.setSize( canvas.width, canvas.height )
 //
 
 // scale
-const scale = 70
+const scale = 120
 
 // colors
 const color_volume     = 0x00ff00
@@ -68,8 +68,9 @@ const volume_bounds_t = [0,Math.PI]
 // scales
 const grain = 0.1
 const size = 1
-const graph_separation = 250
-const axes_size = 1
+const graph_separation = 200
+const axes_size = 0.5
+const graphs_y = -170
 
 //
 /////////////////////////////////////////
@@ -148,7 +149,7 @@ function makeLineT(trans, r, tmin, tmax, step=0.1) {
 // Polar
 //
 var pol_graph = new THREE.Group()
-pol_graph.position.set( -graph_separation,0,0 )
+pol_graph.position.set( -graph_separation, graphs_y, 0 )
 // pol_graph.scale.set( scale, scale, scale )
 scene.add( pol_graph )
 
@@ -315,7 +316,7 @@ pol_graph.add(pol_volume)
 // Cartesian
 //
 var cart_graph = new THREE.Group()
-cart_graph.position.set( graph_separation,0,0 )
+cart_graph.position.set( graph_separation, graphs_y,0 )
 cart_graph.scale.set( scale, scale, scale )
 scene.add( cart_graph )
 
@@ -490,11 +491,11 @@ var cart_grid
 function makeCartGrid() {
     let grid = new THREE.Group()
 
-    for (var i = volume_bounds_r[0]+grid_sep; i < volume_bounds_r[1]; i+= grid_sep) {
+    for (var i = volume_bounds_r[0]+grid_sep; i <= volume_bounds_r[1]+grid_sep; i+= grid_sep) {
         grid.add(makeLineT( pol_to_cart, i, volume_bounds_t[0], volume_bounds_t[1] ))
     }
 
-    for (var i = volume_bounds_t[0]+grid_sep; i < volume_bounds_t[1]; i+= grid_sep) {
+    for (var i = volume_bounds_t[0]+grid_sep; i <= volume_bounds_t[1]+grid_sep; i+= grid_sep) {
         let line = makeLineR( pol_to_cart, i, volume_bounds_r[0], volume_bounds_r[1] )
         grid.add(line)
     }
@@ -535,19 +536,21 @@ dragControls.addEventListener('dragend', function(event) {
     event.object.material.color.set( color_passive )
 });
 
-dragControls.drag_xmin = -70, dragControls.drag_xmax = 70;
-dragControls.drag_ymin = -219, dragControls.drag_ymax = 219;
+dragControls.drag_xmin = -scale,
+dragControls.drag_xmax =  scale;
+dragControls.drag_ymin = -scale*Math.PI,
+dragControls.drag_ymax =  scale*Math.PI;
 
 function updatePos() {
     if (dragControls.drag_position == undefined) { return }
     let new_x = (
         dragControls.drag_position.x
         / (dragControls.drag_xmax - dragControls.drag_xmin)
-        * volume_bounds_r[1])
+        * volume_bounds_r[1]*2)
     let new_y = (
         dragControls.drag_position.y
         / (dragControls.drag_ymax - dragControls.drag_ymin)
-        * volume_bounds_t[1])
+        * volume_bounds_t[1]*2)
     pos = [new_x, new_y]
     updatePol()
     updateCart()

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    146471,       3728]
-NotebookOptionsPosition[    145900,       3703]
-NotebookOutlinePosition[    146259,       3719]
-CellTagsIndexPosition[    146216,       3716]
+NotebookDataLength[    156603,       3939]
+NotebookOptionsPosition[    155873,       3908]
+NotebookOutlinePosition[    156236,       3924]
+CellTagsIndexPosition[    156193,       3921]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -52,6 +52,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                     "+", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
@@ -66,10 +89,10 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                     "+", 
-                    RowBox[{"(", 
-                    RowBox[{
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    ")"}]}], ")"}], "+", 
+                  RowBox[{"(", 
+                   RowBox[{
                     RowBox[{"Cos", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -90,29 +113,6 @@ Cell[BoxData[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                    ")"}]}], ")"}], "+", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                    ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
            RowBox[{"Abs", "[", 
             RowBox[{"(", 
@@ -204,6 +204,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
                   RowBox[{"(", 
                    RowBox[{
@@ -218,30 +241,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -250,7 +250,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -258,13 +258,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], ",", 
        RowBox[{"(", 
         RowBox[{"0", "+", 
@@ -362,6 +362,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                   "+", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
@@ -376,18 +399,18 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                   "+", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"(", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                   ")"}]}], ")"}], "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
-                    RowBox[{"(", 
-                    RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -400,29 +423,6 @@ Cell[BoxData[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                   ")"}]}], ")"}], "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
          RowBox[{"Abs", "[", 
           RowBox[{"(", 
@@ -518,6 +518,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                   "+", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
@@ -532,18 +555,18 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                   "+", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"(", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                   ")"}]}], ")"}], "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
-                    RowBox[{"(", 
-                    RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -556,7 +579,14 @@ Cell[BoxData[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                   ")"}]}], ")"}], "+", 
+                 ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
+         RowBox[{"Abs", "[", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Cos", "[", 
@@ -572,21 +602,14 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                 ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
-         RowBox[{"Abs", "[", 
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Cos", "[", 
@@ -608,30 +631,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -640,7 +640,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -648,13 +648,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], ",", 
        RowBox[{"(", 
         RowBox[{"0", "+", 
@@ -672,6 +672,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
                   RowBox[{"(", 
                    RowBox[{
@@ -686,30 +709,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -718,7 +718,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -726,13 +726,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}]}], "}"}], 
      ",", 
      RowBox[{"{", 
@@ -763,13 +763,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
                    "+", 
                   RowBox[{"(", 
                    RowBox[{
@@ -778,7 +778,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"Sin", "[", 
@@ -786,7 +786,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -801,7 +801,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                   RowBox[{"(", 
                    RowBox[{
                     RowBox[{"Sin", "[", 
@@ -815,7 +815,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
          RowBox[{"Abs", "[", 
           RowBox[{"(", 
@@ -999,13 +999,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
                      "+", 
                     RowBox[{"(", 
                     RowBox[{
@@ -1014,7 +1014,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"Sin", "[", 
@@ -1022,7 +1022,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -1037,7 +1037,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"Sin", "[", 
@@ -1051,7 +1051,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                    ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
            RowBox[{"Abs", "[", 
             RowBox[{"(", 
@@ -1309,13 +1309,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
                    "+", 
                   RowBox[{"(", 
                    RowBox[{
@@ -1324,7 +1324,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"Sin", "[", 
@@ -1332,7 +1332,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -1347,7 +1347,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                   RowBox[{"(", 
                    RowBox[{
                     RowBox[{"Sin", "[", 
@@ -1361,7 +1361,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
          RowBox[{"Abs", "[", 
           RowBox[{"(", 
@@ -1536,6 +1536,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
                   RowBox[{"(", 
                    RowBox[{
@@ -1550,30 +1573,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -1582,7 +1582,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -1590,13 +1590,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], ",", 
        RowBox[{"(", 
         RowBox[{
@@ -1928,30 +1928,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                   "+", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"Sin", "[", 
@@ -1965,48 +1942,18 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                   ")"}]}], ")"}], "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                   "+", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                 ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
-         RowBox[{"Abs", "[", 
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -2018,8 +1965,8 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                   ")"}]}], ")"}], "+", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Cos", "[", 
@@ -2042,6 +1989,59 @@ Cell[BoxData[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                 ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
+         RowBox[{"Abs", "[", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -2050,7 +2050,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -2058,13 +2058,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], ",", 
        RowBox[{"(", 
         RowBox[{"0", "+", 
@@ -2082,6 +2082,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
                   RowBox[{"(", 
                    RowBox[{
@@ -2096,30 +2119,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -2128,7 +2128,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -2136,13 +2136,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}]}], "}"}], 
      ",", 
      RowBox[{"{", 
@@ -2156,29 +2156,6 @@ Cell[BoxData[{
              RowBox[{
               RowBox[{"(", 
                RowBox[{
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Cos", "[", 
@@ -2200,7 +2177,30 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -2209,7 +2209,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -2217,13 +2217,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], ",", 
        RowBox[{"(", 
         RowBox[{
@@ -2245,6 +2245,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                     "+", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
@@ -2259,10 +2282,10 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                     "+", 
-                    RowBox[{"(", 
-                    RowBox[{
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    ")"}]}], ")"}], "+", 
+                  RowBox[{"(", 
+                   RowBox[{
                     RowBox[{"Cos", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -2283,29 +2306,6 @@ Cell[BoxData[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                    ")"}]}], ")"}], "+", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                    ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
            RowBox[{"Abs", "[", 
             RowBox[{"(", 
@@ -2321,7 +2321,7 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"Sin", "[", 
@@ -2329,13 +2329,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
                    "+", 
                   RowBox[{"(", 
                    RowBox[{
@@ -2344,9 +2344,32 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                   ")"}]}], ")"}], "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -2358,8 +2381,38 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                   ")"}]}], ")"}], "+", 
+                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                 ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
+         RowBox[{"Abs", "[", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Cos", "[", 
@@ -2382,59 +2435,6 @@ Cell[BoxData[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                 ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
-         RowBox[{"Abs", "[", 
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -2443,7 +2443,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -2451,13 +2451,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"2", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], ",", 
        RowBox[{"(", 
         RowBox[{"0", "+", 
@@ -2555,6 +2555,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                   "+", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
@@ -2569,18 +2592,18 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                   "+", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"(", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                   ")"}]}], ")"}], "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                    RowBox[{"(", 
-                    RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -2593,29 +2616,6 @@ Cell[BoxData[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                   ")"}]}], ")"}], "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
          RowBox[{"Abs", "[", 
           RowBox[{"(", 
@@ -2711,6 +2711,29 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                   "+", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
@@ -2725,18 +2748,18 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                   "+", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"(", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                   ")"}]}], ")"}], "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                    RowBox[{"(", 
-                    RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -2749,29 +2772,6 @@ Cell[BoxData[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"3", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                   ")"}]}], ")"}], "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"3", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
          RowBox[{"Abs", "[", 
           RowBox[{"(", 
@@ -2780,29 +2780,6 @@ Cell[BoxData[{
              RowBox[{
               RowBox[{"(", 
                RowBox[{
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Cos", "[", 
@@ -2824,7 +2801,30 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -2833,7 +2833,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -2841,13 +2841,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}]}], "}"}], 
      ",", 
      RowBox[{"{", 
@@ -2868,29 +2868,6 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
                   RowBox[{"(", 
                    RowBox[{
@@ -2905,7 +2882,30 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -2914,7 +2914,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -2922,13 +2922,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], ",", 
        RowBox[{"(", 
         RowBox[{
@@ -3024,29 +3024,6 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                 "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
                   RowBox[{"(", 
                    RowBox[{
@@ -3061,7 +3038,30 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                 "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "+", 
               RowBox[{"(", 
                RowBox[{
@@ -3070,7 +3070,7 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                   RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
+                   RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{"Sin", "[", 
@@ -3078,13 +3078,13 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
                   RowBox[{"Sin", "[", 
                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], ",", 
        RowBox[{"(", 
         RowBox[{
@@ -3416,29 +3416,6 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
-                    RowBox[{"Sin", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
-                   "+", 
-                  RowBox[{"(", 
-                   RowBox[{
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "*", 
                     RowBox[{"(", 
                     RowBox[{
@@ -3453,18 +3430,18 @@ Cell[BoxData[{
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
-                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
-                   ")"}]}], ")"}], "+", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"Cos", "[", 
-                   RowBox[{"(", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], ")"}],
+                   "+", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"1", "/", "5"}]}], ")"}], "]"}], "*", 
-                  RowBox[{"(", 
-                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
                     RowBox[{"Sin", "[", 
                     RowBox[{"(", 
                     RowBox[{
@@ -3477,6 +3454,29 @@ Cell[BoxData[{
                     RowBox[{"(", 
                     RowBox[{"2", "*", "Pi"}], ")"}], "*", 
                     RowBox[{"0", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
+                   ")"}]}], ")"}], "+", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"4", "/", "5"}]}], ")"}], "]"}], "*", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"0", "/", "5"}]}], ")"}], "]"}], "-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "Pi"}], ")"}], "*", 
+                    RowBox[{"1", "/", "5"}]}], ")"}], "]"}]}], ")"}]}], 
                  ")"}]}], ")"}], "/", "2"}], ")"}], "]"}]}], ")"}], "+", 
          RowBox[{"Abs", "[", 
           RowBox[{"(", 
@@ -3557,7 +3557,8 @@ Cell[BoxData[{
     "}"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.742911641322525*^9, 3.742911650473076*^9}, {
    3.742912593450338*^9, 3.742912595766469*^9}, 3.742913159543521*^9, {
-   3.742919076272498*^9, 3.742919077743947*^9}}]
+   3.742919076272498*^9, 3.742919077743947*^9}, {3.744134539840624*^9, 
+   3.744134540739572*^9}}]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -3589,61 +3590,132 @@ Cell[BoxData[{
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"transform", "[", 
-    RowBox[{"{", 
-     RowBox[{"x_", ",", "y_", ",", "z_", ",", "w_", ",", "v_"}], "}"}], "]"}],
-    ":=", 
-   RowBox[{"Block", "[", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"{", "m1", "}"}], ",", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"m1", "=", 
-       RowBox[{"(", GridBox[{
-          {
-           FractionBox["1", 
-            SqrtBox["2"]], 
-           RowBox[{"-", 
-            FractionBox["1", 
-             SqrtBox["6"]]}], "x"},
-          {"0", 
-           SqrtBox[
-            FractionBox["2", "3"]], "y"},
-          {"0", "0", "z"},
-          {"0", "0", "w"},
-          {
-           RowBox[{"-", 
-            FractionBox["1", 
-             SqrtBox["2"]]}], 
-           RowBox[{"-", 
-            FractionBox["1", 
-             SqrtBox["6"]]}], 
-           RowBox[{"v", "-", "sum"}]}
-         }], ")"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"m1", "=", 
-       RowBox[{"RowReduce", "[", "m1", "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"Return", "[", 
-       RowBox[{"{", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"m1", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "[", 
-          RowBox[{"[", "3", "]"}], "]"}], ",", "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"m1", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "[", 
-          RowBox[{"[", "3", "]"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
-       "]"}], ";"}]}], "\[IndentingNewLine]", "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{"verticesTransformed", "=", 
-  RowBox[{"Table", "[", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"transform", "[", 
-     RowBox[{"vertices", "[", 
-      RowBox[{"[", "i", "]"}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-    RowBox[{"{", 
-     RowBox[{"i", ",", "1", ",", 
-      RowBox[{"Length", "[", "vertices", "]"}]}], "}"}]}], 
-   "\[IndentingNewLine]", "]"}]}]}], "Input",
+     RowBox[{"{", 
+      RowBox[{"x_", ",", "y_", ",", "z_", ",", "w_", ",", "v_"}], "}"}], 
+     "]"}], ":=", 
+    RowBox[{"Block", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", "m1", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"m1", "=", 
+        RowBox[{"(", GridBox[{
+           {
+            FractionBox["1", 
+             SqrtBox["2"]], 
+            RowBox[{"-", 
+             FractionBox["1", 
+              SqrtBox["6"]]}], 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{"2", " ", 
+               SqrtBox["3"]}]]}], 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{"2", " ", 
+               SqrtBox["5"]}]]}], "x"},
+           {"0", 
+            SqrtBox[
+             FractionBox["2", "3"]], 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{"2", " ", 
+               SqrtBox["3"]}]]}], 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{"2", " ", 
+               SqrtBox["5"]}]]}], "y"},
+           {"0", "0", 
+            FractionBox[
+             SqrtBox["3"], "2"], 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{"2", " ", 
+               SqrtBox["5"]}]]}], "z"},
+           {"0", "0", "0", 
+            FractionBox["2", 
+             SqrtBox["5"]], "w"},
+           {
+            RowBox[{"-", 
+             FractionBox["1", 
+              SqrtBox["2"]]}], 
+            RowBox[{"-", 
+             FractionBox["1", 
+              SqrtBox["6"]]}], 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{"2", " ", 
+               SqrtBox["3"]}]]}], 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{"2", " ", 
+               SqrtBox["5"]}]]}], 
+            RowBox[{"v", "-", "sum"}]}
+          }], ")"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"m1", "=", 
+        RowBox[{"RowReduce", "[", "m1", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"m1", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "[", 
+           RowBox[{"[", "5", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"m1", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "[", 
+           RowBox[{"[", "5", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"m1", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "[", 
+           RowBox[{"[", "5", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"m1", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "[", 
+           RowBox[{"[", "5", "]"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+        "]"}], ";"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"transform", " ", "vertices"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"verticesTransformed", "=", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"transform", "[", 
+      RowBox[{"vertices", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", 
+       RowBox[{"Length", "[", "vertices", "]"}]}], "}"}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"N", "[", "verticesTransformed", "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"log", " ", "sums"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"N", "[", 
+      RowBox[{"Sum", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"verticesTransformed", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "[", 
+         RowBox[{"[", "j", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "1", ",", 
+          RowBox[{"Length", "[", 
+           RowBox[{"verticesTransformed", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], "]"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", 
+       RowBox[{"Length", "[", "verticesTransformed", "]"}]}], "}"}]}], "]"}], 
+   "*)"}]}]}], "Input",
  CellChangeTimes->{{3.74291177788864*^9, 3.742911920681808*^9}, {
    3.7429127571661997`*^9, 3.7429128537766247`*^9}, {3.742913173470668*^9, 
    3.7429131735894337`*^9}, {3.74291909553907*^9, 3.74291932144345*^9}, {
@@ -3657,52 +3729,185 @@ Cell[BoxData[{
    3.743037021363976*^9}, {3.743037116612155*^9, 3.743037131036359*^9}, 
    3.7430381230139227`*^9, {3.743038225299405*^9, 3.743038252784946*^9}, {
    3.7430428146656*^9, 3.7430428252543707`*^9}, {3.743042959496551*^9, 
-   3.743042959597521*^9}}],
+   3.743042959597521*^9}, {3.744134581569825*^9, 3.744134590424748*^9}, {
+   3.7441348245805597`*^9, 3.7441348472189817`*^9}, {3.744147819186174*^9, 
+   3.7441478411343813`*^9}, {3.744147874344611*^9, 3.744147889588917*^9}, {
+   3.7441479257311*^9, 3.7441479264910927`*^9}, {3.744147989589766*^9, 
+   3.744148034814032*^9}, {3.744148069552129*^9, 3.744148140408862*^9}, {
+   3.744148174875648*^9, 3.744148175538468*^9}, {3.744148252332752*^9, 
+   3.7441482542288933`*^9}, {3.7441483141672583`*^9, 
+   3.7441483179029217`*^9}, {3.744148365031818*^9, 3.744148370815954*^9}, {
+   3.744148450105714*^9, 3.7441484799395447`*^9}, {3.744148522963805*^9, 
+   3.744148540172285*^9}, {3.7441485768382*^9, 3.744148626896215*^9}, {
+   3.744148690456923*^9, 3.744148787013102*^9}, {3.744220165553892*^9, 
+   3.744220176402431*^9}, {3.744220206939631*^9, 3.7442202070838614`*^9}, {
+   3.744220269885591*^9, 3.744220270293638*^9}, {3.744220321367141*^9, 
+   3.744220359408083*^9}, {3.744220395073268*^9, 3.744220398001441*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
    RowBox[{"{", 
-    RowBox[{"0", ",", "0"}], "}"}], ",", 
+    RowBox[{
+    "6.260300076564343`", ",", "2.2096220192679445`", ",", 
+     "2.4832952259117693`", ",", "1.9235522107345333`"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"0", ",", "0"}], "}"}], ",", 
+    RowBox[{
+    "5.043738839729681`", ",", "2.0438121311115425`", ",", 
+     "2.9351705529273624`", ",", "0.7347315653655915`"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"0", ",", "0"}], "}"}], ",", 
+    RowBox[{
+    "5.7956150334891126`", ",", "3.346099899704381`", ",", 
+     "1.445193417380301`", ",", "2.658283776100125`"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"0", ",", "0"}], "}"}], ",", 
+    RowBox[{
+    "4.291862645970248`", ",", "3.882671969120135`", ",", 
+     "1.2554865429407116`", ",", "1.9235522107345333`"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"0", ",", "0"}], "}"}]}], "}"}]], "Output",
- CellChangeTimes->{3.743038253154163*^9, 3.743042825809058*^9, 
-  3.7430429600927*^9}]
+    RowBox[{
+    "3.8271776028950177`", ",", "3.0778138649965037`", ",", 
+     "2.1763430551690046`", ",", "0.7347315653655915`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.744220270798587*^9, {3.744220324891279*^9, 3.744220359883857*^9}, 
+   3.744220398496834*^9, {3.744220621941238*^9, 3.744220630474532*^9}, 
+   3.744220726995763*^9}]
+}, Open  ]]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
+Cell["Draw in 3D", "Section",
+ CellChangeTimes->{{3.744220580148238*^9, 3.744220585866774*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{
-  RowBox[{"x", "=", 
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"Sum", "[", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"vertices", "[", 
-         RowBox[{"[", "i", "]"}], "]"}], "[", 
-        RowBox[{"[", "j", "]"}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"j", ",", "1", ",", 
-         RowBox[{"Length", "[", 
-          RowBox[{"vertices", "[", 
-           RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "vertices", "]"}]}], "}"}]}], "]"}]}], 
-  ";"}]], "Input",
- CellChangeTimes->{{3.743043264225985*^9, 3.74304335023256*^9}, {
-  3.743043405561986*^9, 3.743043426412199*^9}}]
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{"Point", "[", "verticesProjected", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.744220277706091*^9, 3.744220307261375*^9}, {
+   3.74422036585605*^9, 3.744220366821826*^9}, 3.744220572310615*^9, {
+   3.744220688736205*^9, 3.744220697332736*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[
+  Point3DBox[
+   NCache[{{Rational[-1, 32] (5 (5 - 5^Rational[1, 2])^Rational[1, 2] + 
+       15 (5 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       35 (5 + 5^Rational[1, 2])^Rational[1, 2] + 
+       7 (5 (5 + 5^Rational[1, 2]))^Rational[1, 2])/(-1 + 
+      Rational[5, 64] (
+        3 (2 (5 - 5^Rational[1, 2]))^Rational[1, 2] + (
+          10 (5 - 5^Rational[1, 2]))^
+         Rational[1, 2] + (2 (5 + 5^Rational[1, 2]))^
+         Rational[1, 2] + (10 (5 + 5^Rational[1, 2]))^Rational[1, 2])), 
+      Rational[-1, 96] ((-5) (3 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       9 (15 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       25 (3 (5 + 5^Rational[1, 2]))^Rational[1, 2] + 
+       5 (15 (5 + 5^Rational[1, 2]))^Rational[1, 2])/(-1 + 
+      Rational[5, 64] (
+        3 (2 (5 - 5^Rational[1, 2]))^Rational[1, 2] + (
+          10 (5 - 5^Rational[1, 2]))^
+         Rational[1, 2] + (2 (5 + 5^Rational[1, 2]))^
+         Rational[1, 2] + (10 (5 + 5^Rational[1, 2]))^Rational[1, 2])), 
+      Rational[-5, 192] (5 (6 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       3 (30 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       5 (6 (5 + 5^Rational[1, 2]))^Rational[1, 2] + (
+         30 (5 + 5^Rational[1, 2]))^Rational[1, 2])/(-1 + 
+      Rational[5, 64] (
+        3 (2 (5 - 5^Rational[1, 2]))^Rational[1, 2] + (
+          10 (5 - 5^Rational[1, 2]))^
+         Rational[1, 2] + (2 (5 + 5^Rational[1, 2]))^
+         Rational[1, 2] + (10 (5 + 5^Rational[1, 2]))^Rational[1, 2]))}, {
+     Rational[-1, 32] (-1 + 
+        Rational[5, 8] (Rational[1, 2] (5 - 5^Rational[1, 2]))^
+          Rational[1, 2])^(-1) ((-5) (5 - 5^Rational[1, 2])^Rational[1, 2] + 
+       9 (5 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       35 (5 + 5^Rational[1, 2])^Rational[1, 2] + 
+       7 (5 (5 + 5^Rational[1, 2]))^Rational[1, 2]), 
+      Rational[-1, 96] (-1 + 
+        Rational[5, 8] (Rational[1, 2] (5 - 5^Rational[1, 2]))^
+          Rational[1, 2])^(-1) ((-15) (3 (5 - 5^Rational[1, 2]))^
+         Rational[1, 2] + 11 (15 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       25 (3 (5 + 5^Rational[1, 2]))^Rational[1, 2] + 
+       5 (15 (5 + 5^Rational[1, 2]))^Rational[1, 2]), 
+      Rational[-1, 48] (-1 + 
+        Rational[5, 8] (Rational[1, 2] (5 - 5^Rational[1, 2]))^
+          Rational[1, 2])^(-1) (5 (30 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       10 (6 (5 + 5^Rational[1, 2]))^Rational[1, 2] + 
+       2 (30 (5 + 5^Rational[1, 2]))^Rational[1, 2])}, {
+     Rational[-1, 32] (5 (5 - 5^Rational[1, 2])^Rational[1, 2] + 
+       11 (5 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       35 (5 + 5^Rational[1, 2])^Rational[1, 2] + 
+       7 (5 (5 + 5^Rational[1, 2]))^Rational[1, 2])/(-1 + 
+      Rational[5, 32] (
+        2 (2 (5 - 5^Rational[1, 2]))^Rational[1, 2] + (
+          2 (5 + 5^Rational[1, 2]))^
+         Rational[1, 2] + (10 (5 + 5^Rational[1, 2]))^Rational[1, 2])), 
+      Rational[-1, 96] (15 (3 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       17 (15 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       25 (3 (5 + 5^Rational[1, 2]))^Rational[1, 2] + 
+       5 (15 (5 + 5^Rational[1, 2]))^Rational[1, 2])/(-1 + 
+      Rational[5, 32] (
+        2 (2 (5 - 5^Rational[1, 2]))^Rational[1, 2] + (
+          2 (5 + 5^Rational[1, 2]))^
+         Rational[1, 2] + (10 (5 + 5^Rational[1, 2]))^Rational[1, 2])), 
+      Rational[-1, 96] (10 (30 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       5 (6 (5 + 5^Rational[1, 2]))^Rational[1, 2] + (
+         30 (5 + 5^Rational[1, 2]))^Rational[1, 2])/(-1 + 
+      Rational[5, 32] (
+        2 (2 (5 - 5^Rational[1, 2]))^Rational[1, 2] + (
+          2 (5 + 5^Rational[1, 2]))^
+         Rational[1, 2] + (10 (5 + 5^Rational[1, 2]))^Rational[1, 2]))}, {
+     Rational[-1, 16] (6 (5 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       15 (5 + 5^Rational[1, 2])^Rational[1, 2] + (5 (5 + 5^Rational[1, 2]))^
+        Rational[1, 2])/(-1 + 
+      Rational[5, 16] ((2 (5 - 5^Rational[1, 2]))^
+         Rational[1, 2] + (2 (5 + 5^Rational[1, 2]))^Rational[1, 2])), 
+      Rational[-5, 48] (2 (15 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       3 (3 (5 + 5^Rational[1, 2]))^Rational[1, 2] + (
+         15 (5 + 5^Rational[1, 2]))^Rational[1, 2])/(-1 + 
+      Rational[5, 16] ((2 (5 - 5^Rational[1, 2]))^
+         Rational[1, 2] + (2 (5 + 5^Rational[1, 2]))^Rational[1, 2])), 
+      Rational[-1, 48] (
+       5 (30 (5 - 5^Rational[1, 2]))^Rational[1, 2] + (
+         30 (5 + 5^Rational[1, 2]))^Rational[1, 2])/(-1 + 
+      Rational[5, 16] ((2 (5 - 5^Rational[1, 2]))^
+         Rational[1, 2] + (2 (5 + 5^Rational[1, 2]))^Rational[1, 2]))}, {
+     Rational[-1, 16] (-1 + 
+        Rational[5, 8] (Rational[1, 2] (5 - 5^Rational[1, 2]))^
+          Rational[1, 2])^(-1) (4 (5 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       15 (5 + 5^Rational[1, 2])^Rational[1, 2] + (5 (5 + 5^Rational[1, 2]))^
+        Rational[1, 2]), 
+      Rational[-1, 48] (-1 + 
+        Rational[5, 8] (Rational[1, 2] (5 - 5^Rational[1, 2]))^
+          Rational[1, 2])^(-1) (4 (15 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       15 (3 (5 + 5^Rational[1, 2]))^Rational[1, 2] + 
+       5 (15 (5 + 5^Rational[1, 2]))^Rational[1, 2]), 
+      Rational[-1, 48] (-1 + 
+        Rational[5, 8] (Rational[1, 2] (5 - 5^Rational[1, 2]))^
+          Rational[1, 2])^(-1) (5 (30 (5 - 5^Rational[1, 2]))^Rational[1, 2] + 
+       4 (30 (5 + 5^Rational[1, 2]))^
+         Rational[
+          1, 2])}}, {{-6.77850153331917, -2.392525288321875, \
+-2.688852018378818}, {19.01371660250845, 7.70469405426361, 
+    11.064906976107421`}, {-3.4949476784479985`, -2.0178089829556094`, \
+-0.8714994611953811}, {-4.647125085171719, -4.204063315523992, \
+-1.3594104679173247`}, {14.4275650744862, 11.602638923995347`, 
+    8.204304662816096}}]],
+  ImageSize->{366.61961328781854`, 356.53276879319225`},
+  ViewPoint->{1.531864022475538, -0.6711521656494761, -2.9415892621487942`},
+  ViewVertical->{
+   0.3021979632663213, -1.4488975110449271`, -0.6501991829895942}]], "Output",\
+
+ CellChangeTimes->{{3.744220284187895*^9, 3.744220308171261*^9}, 
+   3.744220367235756*^9, 3.744220590514853*^9, {3.744220661958023*^9, 
+   3.744220697500476*^9}}]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1676, 1006},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{1280, 778},
+WindowMargins->{{Automatic, 192}, {-800, Automatic}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 21, 2016)",
 StyleDefinitions->"Default.nb"
@@ -3720,15 +3925,21 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 108, 1, 64, "Section"],
-Cell[691, 25, 140221, 3534, 2364, "Input"]
+Cell[691, 25, 140271, 3535, 2364, "Input"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[140949, 3564, 183, 2, 50, "Section"],
+Cell[140999, 3565, 183, 2, 50, "Section"],
 Cell[CellGroupData[{
-Cell[141157, 3570, 3497, 89, 484, "Input"],
-Cell[144657, 3661, 435, 14, 32, "Output"]
+Cell[141207, 3571, 7004, 173, 743, "Input"],
+Cell[148214, 3746, 1048, 27, 32, "Output"]
+}, Open  ]]
 }, Open  ]],
-Cell[145107, 3678, 777, 22, 75, "Input"]
+Cell[CellGroupData[{
+Cell[149311, 3779, 95, 1, 64, "Section"],
+Cell[CellGroupData[{
+Cell[149431, 3784, 298, 5, 32, "Input"],
+Cell[149732, 3791, 6113, 113, 372, "Output"]
+}, Open  ]]
 }, Open  ]]
 }
 ]

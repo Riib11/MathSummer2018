@@ -280,8 +280,8 @@ _ = function() {
     const target2_1_z = document.getElementById("target2_1_1_z")
 
     function updatetarget2_1(x,z) {
-        katex.render(" y = " + format3dec(x), target2_1_x)
-        katex.render(" x = " + format3dec(z), target2_1_z)
+        katex.render(" x = " + format3dec(x), target2_1_x)
+        katex.render(" y = " + format3dec(z), target2_1_z)
     }
 
     //

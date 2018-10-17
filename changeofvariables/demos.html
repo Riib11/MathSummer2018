@@ -25,35 +25,35 @@
         <h2>Introduction</h2>
 
         <p>
-            Suppose we have an oddly-shaped volume \(S\), a mapping \(\Phi\), and a nicely-shaped volume \(R\) such that \(\Phi(R) = S\). This is the ideal scenario for applying a change of varialbes in order to integrate \(S\) as easily as integrating \(R\). Generally, you will be given \(S\) and you will need to come up with \(\Phi\) and \(R\). 
+            Suppose we have an strangely-shaped region \(S\), a mapping \(\Phi\), and a nicely-shaped region \(R\) such that \(\Phi(R) = S\). This is the ideal scenario for applying the change of variables theorem in order to integrate \(S\) (with the  technical requirements that \(R\) is compact, \(\Phi \in C^1\), and \(\Phi\) is injective on \(R^0\)). Generally, you will be given \(S\) and you will need to come up with \(\Phi\) and \(R\). 
         </p>
 
         <p>
-            You should remember the key result needed to apply this technique is
+            In this scenario, change of variables tells us that
         </p>
         
         $$
-            \int_S = \int_R |\Phi^\prime(x)| \Phi(x) \text{d}x
+            \int_S f = \int_R \Phi \circ f \cdot | \Phi^\prime |
         $$
 
         <p>
-            where \( x \) abstractly represents a unit of integration over \(R\). Below are two interactive demonstrations of this technique in action.
+            for \( f : S \rightarrow \mathbb{R} \) integrable.
         </p>
 
         <h2>Polar</h2>
 
         <p>
-            Below on the right we have our target green area \(S\) and on the left is the green \(R\). We know that \( \Phi(R) = S \), and in this case \( \Phi \) is the polar mapping \( (r,\theta) \mapsto (r \cos \theta, r \sin \theta) \). Drag around the blue box on the left, which represents \(\text{d}R\) (a bit of \(R\)). The corresponding \( \Phi(\text{d}R) \) is the blue area on the right, and the overlaying red area is \( \Phi^\prime(\text{d}R) + \Phi(x) \), where \(x\) is the lower right corner of \(\text{d}R\). Note how different positions of \(\text{d}R\) affect the orientation and scale of the areas on the right.
+            Below on the right we have our target green area \(S\) and on the left is the green \(R\). We know that \( \Phi(R) = S \). In this case we can take \( \Phi \) to be the polar mapping \( (r,\theta) \mapsto (r \cos \theta, r \sin \theta) \). Drag around the blue box on the left, which represents \(\text{d}R\) (a bit of \(R\)). The corresponding \( \Phi(\text{d}R) \) is the blue area on the right, and the overlaying red area is \( \Phi^\prime(\text{d}R) + \Phi(x) \), where \(x\) is the lower right corner of \(\text{d}R\). Note how different positions of \(\text{d}R\) affect the orientation and scale of the areas on the right. Additionally, you can scale \(\text{d}R\) with the red circle at its top-right corner.
         </p>
         
         <!---->
         <center><canvas id="canvas1"></canvas></center>
         <!---->
 
-        <h2>Complex</h2>
+        <h2>Complex Squaring</h2>
 
         <p>
-            Again, we have another very similar setup except that here \(\Phi\) is the complex mapping \( (u,v) \mapsto ( u^2-v^2, 2 u v ) \). This particular mapping has some interesting properties demonstrated by the organization of space on \(S\)'s side. Drag around \(\text{d}R\) and note how it's different position affect the orientation and scale of \( \Phi(\text{d}R) \) and \( \Phi^\prime(\text{d}R) + \Phi(x) \).
+            Again, we have another very similar setup except that here \(\Phi\) is the mapping \( (u,v) \mapsto ( u^2-v^2, 2 u v ) \), which represents the complex squaring map under the covered identification \(C \cong \mathbb{R}^2\). Drag around and scale \(\text{d}R\) and note how it's different positions and sizes affect the orientation and scale of \( \Phi(\text{d}R) \) and \( \Phi^\prime(\text{d}R) + \Phi(x) \).
         </p>
 
         <!---->
