@@ -18,7 +18,7 @@ Define `ori` to be the following orientation on `cox`:
 
     t 1 -> t 2 -> ... -> t n
 
-This is a partial ordering. Define Up and Down: for `i in {2,...,n-1}`, `i` is Up if the edge `(t (i - 1), t i)` is directed as `t i -> t (i - 1)`, and Down otherwise. `1` and `n` are Down.
+Define Up and Down: for `i in {2,...,n-1}`, `i` is Up if the edge `(t (i - 1), t i)` is directed as `t i -> t (i - 1)`, and Down otherwise. `1` and `n` are Down.
 
 Define `U := { i in [n] | i is Up }`
 Define `D := { i in [n] | i is Down }`
@@ -32,7 +32,7 @@ Define `mu i j`, that measures distances between labels of `P`, to be
     mu : [n] -> {0,...,n+1} -> [n+2]
     mu i j
         | i >  j => number of edges on path i->j
-                    only between labels <= i
+                    only b labels <= i
         | i <= j => number of edges on path i->j
                     only between labels >= i
 
@@ -46,16 +46,16 @@ Define `L i` and `R i` to be
 
 Define `p_l i, p_r i` to be
 
-    p_l : [n] -> [n+2]
-    p_l i = max { mu i a | a in (L i) }
+    p_L : [n] -> [n+2]
+    p_L i = max { mu i a | a in (L i) }
 
-    p_r : [n] -> [n+2]
-    p_r i = max { mu i b | b in (R i) }
+    p_R : [n] -> [n+2]
+    p_R i = max { mu i b | b in (R i) }
 
 Define `w i`, the weight a label, to be
     
     w : [n] -> N
-    w i = (p_l i) * (p_r i)
+    w i = (p_L i) * (p_R i)
 
 Define `x i`, the scalar corresponding to a label, to be
 
